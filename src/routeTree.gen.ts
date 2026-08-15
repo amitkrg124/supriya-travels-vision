@@ -12,6 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as HajjRouteImport } from './routes/hajj'
+import { Route as OurServicesRouteImport } from './routes/our-services'
+import { Route as PackagesRouteImport } from './routes/packages'
+import { Route as UmrahRouteImport } from './routes/umrah'
 import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
 import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
 
@@ -30,6 +34,26 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HajjRoute = HajjRouteImport.update({
+  id: '/hajj',
+  path: '/hajj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurServicesRoute = OurServicesRouteImport.update({
+  id: '/our-services',
+  path: '/our-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UmrahRoute = UmrahRouteImport.update({
+  id: '/umrah',
+  path: '/umrah',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
   id: '/destinations/',
   path: '/destinations/',
@@ -45,6 +69,10 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/contact': typeof ContactRoute
+  '/hajj': typeof HajjRoute
+  '/our-services': typeof OurServicesRoute
+  '/packages': typeof PackagesRoute
+  '/umrah': typeof UmrahRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/destinations/': typeof DestinationsIndexRoute
 }
@@ -52,6 +80,10 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/contact': typeof ContactRoute
+  '/hajj': typeof HajjRoute
+  '/our-services': typeof OurServicesRoute
+  '/packages': typeof PackagesRoute
+  '/umrah': typeof UmrahRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/destinations': typeof DestinationsIndexRoute
 }
@@ -60,20 +92,45 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
   '/contact': typeof ContactRoute
+  '/hajj': typeof HajjRoute
+  '/our-services': typeof OurServicesRoute
+  '/packages': typeof PackagesRoute
+  '/umrah': typeof UmrahRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/destinations/': typeof DestinationsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about-us' | '/contact' | '/destinations/$slug' | '/destinations/'
+    | '/'
+    | '/about-us'
+    | '/contact'
+    | '/hajj'
+    | '/our-services'
+    | '/packages'
+    | '/umrah'
+    | '/destinations/$slug'
+    | '/destinations/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about-us' | '/contact' | '/destinations/$slug' | '/destinations'
+  to:
+    | '/'
+    | '/about-us'
+    | '/contact'
+    | '/hajj'
+    | '/our-services'
+    | '/packages'
+    | '/umrah'
+    | '/destinations/$slug'
+    | '/destinations'
   id:
     | '__root__'
     | '/'
     | '/about-us'
     | '/contact'
+    | '/hajj'
+    | '/our-services'
+    | '/packages'
+    | '/umrah'
     | '/destinations/$slug'
     | '/destinations/'
   fileRoutesById: FileRoutesById
@@ -82,6 +139,10 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutUsRoute: typeof AboutUsRoute
   ContactRoute: typeof ContactRoute
+  HajjRoute: typeof HajjRoute
+  OurServicesRoute: typeof OurServicesRoute
+  PackagesRoute: typeof PackagesRoute
+  UmrahRoute: typeof UmrahRoute
   DestinationsSlugRoute: typeof DestinationsSlugRoute
   DestinationsIndexRoute: typeof DestinationsIndexRoute
 }
@@ -109,6 +170,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hajj': {
+      id: '/hajj'
+      path: '/hajj'
+      fullPath: '/hajj'
+      preLoaderRoute: typeof HajjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-services': {
+      id: '/our-services'
+      path: '/our-services'
+      fullPath: '/our-services'
+      preLoaderRoute: typeof OurServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/umrah': {
+      id: '/umrah'
+      path: '/umrah'
+      fullPath: '/umrah'
+      preLoaderRoute: typeof UmrahRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/destinations/': {
       id: '/destinations/'
       path: '/destinations'
@@ -130,6 +219,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutUsRoute: AboutUsRoute,
   ContactRoute: ContactRoute,
+  HajjRoute: HajjRoute,
+  OurServicesRoute: OurServicesRoute,
+  PackagesRoute: PackagesRoute,
+  UmrahRoute: UmrahRoute,
   DestinationsSlugRoute: DestinationsSlugRoute,
   DestinationsIndexRoute: DestinationsIndexRoute,
 }
