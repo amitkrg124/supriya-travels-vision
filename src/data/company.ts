@@ -4,7 +4,17 @@
  * Replace via CMS or environment configuration when confirmed.
  */
 
-export const company = {
+export const company: {
+  name: string;
+  shortName: string;
+  tagline: string;
+  description: string;
+  phone: string;
+  whatsapp: string;
+  email: string;
+  address: string;
+  metrics: { label: string; value: string }[];
+} = {
   name: "Supriya Travels of India",
   shortName: "Supriya Travels",
   tagline: "Journeys That Stay With You.",
@@ -17,7 +27,7 @@ export const company = {
   address: "",
   /** Only display metrics that have been verified by the company. */
   metrics: [] as { label: string; value: string }[],
-} as const;
+};
 
 export const whatsappHref = (message?: string) => {
   if (!company.whatsapp) return "/contact";
