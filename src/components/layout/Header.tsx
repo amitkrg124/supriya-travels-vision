@@ -31,12 +31,12 @@ export function Header() {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500",
           scrolled
-            ? "border-b border-white/10 bg-navy-deep/80 backdrop-blur-[14px]"
+            ? "border-b border-white/10 bg-navy-deep/90 backdrop-blur-[14px]"
             : "border-b border-transparent bg-transparent",
         )}
       >
         <div className="shell grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 md:grid-cols-3 md:py-6">
-          <Logo height={44} className="md:h-[52px]" />
+          <Logo height={90} className="md:h-[90px]" />
 
           <nav aria-label="Primary" className="hidden justify-center md:flex">
             <ul className="flex items-center gap-8 lg:gap-10">
@@ -45,7 +45,7 @@ export function Header() {
                   <Link
                     to={item.to}
                     activeOptions={{ exact: item.to === "/" }}
-                    className="link-gold text-[14px] font-medium text-white/85 transition-colors hover:text-white data-[status=active]:text-gold"
+                    className="link-gold text-[14px] font-medium text-white/85 whitespace-nowrap transition-colors hover:text-white data-[status=active]:text-gold"
                   >
                     {item.label}
                   </Link>

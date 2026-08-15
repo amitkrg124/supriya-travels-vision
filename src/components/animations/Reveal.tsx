@@ -2,24 +2,41 @@ import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
+type EntranceType = "fade-up" | "fade" | "clip" | "scale";
+
 type RevealProps = {
   children: ReactNode;
   delay?: number;
   className?: string;
   as?: "div" | "section" | "li" | "article" | "header";
+  entrance?: EntranceType;
 };
 
-export function Reveal({ children, delay = 0, className, as = "div" }: RevealProps) {
+const entranceVariants: Record<EntranceType, { initial: object; animate: object }> = {
+  "fade-up": { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 } },
+  "fade": { initial: { opacity: 0 }, animate: { opacity: 1 } },
+  "clip": { initial: { opacity: 0, clipPath: "inset(0 100% 0 0)" }, animate: { opacity: 1, clipPath: "inset(0 0% 0 0)" } },
+  "scale": { initial: { opacity: 0, scale: 0.96 }, animate: { opacity: 1, scale: 1 } },
+};
+
+export function Reveal({
+  children,
+  delay = 0,
+  className,
+  as = "div",
+  entrance = "fade-up",
+}: RevealProps) {
   const reduced = useReducedMotion();
   const MotionTag = motion[as];
+  const { initial, animate } = entranceVariants[entrance];
 
   return (
     <MotionTag
       className={className}
-      initial={reduced ? false : { opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={reduced ? false : initial}
+      whileInView={animate}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
+      transition={{ duration: entrance === "clip" ? 1 : 0.8, ease: [0.22, 1, 0.36, 1], delay }}
     >
       {children}
     </MotionTag>

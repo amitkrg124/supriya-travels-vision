@@ -9,6 +9,7 @@ import { DestinationCard } from "@/components/destinations/DestinationCard";
 import { CTASection } from "@/components/ui-editorial/CTASection";
 import { destinations, getDestination } from "@/data/destinations";
 import { packagesByDestination } from "@/data/packages";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/destinations/$slug")({
   loader: ({ params }) => {
@@ -21,17 +22,14 @@ export const Route = createFileRoute("/destinations/$slug")({
       return { meta: [{ title: "Destination not found" }, { name: "robots", content: "noindex" }] };
     }
     const d = loaderData.destination;
-    const title = `${d.name} Tour Packages — Supriya Travels of India`;
+    const title = `${d.name} Tour Packages from Delhi | Supriya Travels`;
     return {
-      meta: [
-        { title },
-        { name: "description", content: d.description },
-        { property: "og:title", content: title },
-        { property: "og:description", content: d.description },
-        { property: "og:type", content: "article" },
-        { property: "og:url", content: `/destinations/${params.slug}` },
-      ],
-      links: [{ rel: "canonical", href: `/destinations/${params.slug}` }],
+      meta: createMetadata({
+        title,
+        description: d.description,
+        type: "article"
+      }),
+      links: createCanonicalLink(`/destinations/${params.slug}`),
       scripts: [
         {
           type: "application/ld+json",

@@ -1,11 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import type { Service } from "@/data/services";
 
-export function ServiceCard({ service, index }: { service: Service; index: number }) {
+export function ServiceCard({ service }: { service: Service }) {
   return (
     <article className="group border-t border-border py-8">
-      <div className="grid gap-6 md:grid-cols-[auto_1fr_auto] md:items-baseline">
-        <span className="font-display text-lg text-gold">{String(index + 1).padStart(2, "0")}</span>
+      <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-baseline">
         <div>
           <h3 className="font-display text-2xl leading-tight text-navy md:text-3xl">{service.title}</h3>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-muted-foreground">

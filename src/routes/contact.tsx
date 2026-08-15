@@ -5,21 +5,16 @@ import { Reveal } from "@/components/animations/Reveal";
 import { ContactForm } from "@/components/forms/ContactForm";
 import heroImage from "@/assets/dest-himachal.jpg";
 import { company, whatsappHref } from "@/data/company";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
-    meta: [
-      { title: "Contact — Supriya Travels of India" },
-      {
-        name: "description",
-        content:
-          "Send an enquiry to Supriya Travels of India for Hajj, Umrah, holiday packages, tourist visas or air ticketing.",
-      },
-      { property: "og:title", content: "Contact — Supriya Travels of India" },
-      { property: "og:description", content: "Let's plan your journey." },
-      { property: "og:url", content: "/contact" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    meta: createMetadata({
+      title: "Contact Supriya Travels of India | New Delhi Travel Agency",
+      description:
+        "Send an enquiry to Supriya Travels of India for Hajj, Umrah, holiday packages, tourist visas or air ticketing.",
+    }),
+    links: createCanonicalLink("/contact"),
   }),
   component: ContactPage,
 });
@@ -52,7 +47,15 @@ function ContactPage() {
                 {details.map((d) => (
                   <div key={d.label} className="border-b border-border py-5">
                     <dt className="eyebrow text-gold">{d.label}</dt>
-                    <dd className="mt-2 text-[15px] text-navy">{d.value}</dd>
+                    <dd className="mt-2 text-[15px] text-navy">
+                      {d.label === "Office" && company.googleLocation ? (
+                        <a href={company.googleLocation} target="_blank" rel="noreferrer" className="hover:text-gold transition-colors">
+                          {d.value}
+                        </a>
+                      ) : (
+                        d.value
+                      )}
+                    </dd>
                   </div>
                 ))}
               </dl>

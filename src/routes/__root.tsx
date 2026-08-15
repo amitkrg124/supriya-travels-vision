@@ -17,6 +17,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { SmoothScroll } from "@/components/animations/SmoothScroll";
+import { createMetadata, organizationSchema, websiteSchema } from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -81,16 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Supriya Travels of India — Hajj, Umrah & Global Tours" },
-      {
-        name: "description",
-        content:
-          "Supriya Travels of India arranges Hajj and Umrah packages, domestic and international tours, tourist visas and air ticketing.",
-      },
-      { property: "og:site_name", content: "Supriya Travels of India" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#04111D" },
+      ...createMetadata(),
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -105,14 +97,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "TravelAgency",
-          name: "Supriya Travels of India",
-          description:
-            "Hajj and Umrah packages, domestic and international tour packages, worldwide tourist visas and air ticketing.",
-          areaServed: "IN",
-        }),
+        children: JSON.stringify(organizationSchema),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(websiteSchema),
       },
     ],
   }),

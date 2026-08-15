@@ -24,8 +24,8 @@ export function DestinationCard({
         height={1000}
         loading="lazy"
         className={cn(
-          "w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]",
-          size === "large" ? "h-[62vh] min-h-[420px]" : "h-[300px] md:h-[340px]",
+          "h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]",
+          size === "large" ? "min-h-[62vh]" : "min-h-[300px] md:min-h-[340px]",
         )}
       />
       <div

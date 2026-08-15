@@ -13,8 +13,7 @@ export function CTASection({
     <section className="relative overflow-hidden bg-navy-deep">
       <img
         src={ctaImage}
-        alt=""
-        aria-hidden
+        alt="Aerial view of a winding mountain road through lush valleys — the journey ahead"
         width={1920}
         height={1080}
         loading="lazy"

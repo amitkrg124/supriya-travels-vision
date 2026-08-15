@@ -1,21 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/services/ServiceDetail";
 import heroImage from "@/assets/about-editorial.jpg";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/services/tourist-visas")({
   head: () => ({
-    meta: [
-      { title: "Worldwide Tourist Visas — Supriya Travels of India" },
-      {
-        name: "description",
-        content:
-          "Tourist visa documentation, appointment scheduling and application support for destinations worldwide.",
-      },
-      { property: "og:title", content: "Worldwide Tourist Visas — Supriya Travels of India" },
-      { property: "og:description", content: "Visa documentation and application support." },
-      { property: "og:url", content: "/services/tourist-visas" },
-    ],
-    links: [{ rel: "canonical", href: "/services/tourist-visas" }],
+    meta: createMetadata({
+      title: "Worldwide Tourist Visa Assistance | Supriya Travels of India",
+      description:
+        "Tourist visa documentation, appointment scheduling and application support for destinations worldwide.",
+    }),
+    links: createCanonicalLink("/services/tourist-visas"),
   }),
   component: () => (
     <ServiceDetail

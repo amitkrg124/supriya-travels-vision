@@ -11,14 +11,15 @@ const typeLabel: Record<TravelPackage["type"], string> = {
 
 export function PackageCard({ pkg }: { pkg: TravelPackage }) {
   const destination = pkg.destinationSlug ? getDestination(pkg.destinationSlug) : undefined;
+  const image = pkg.image || destination?.heroImage;
 
   return (
     <article className="group flex h-full flex-col border border-border bg-card transition-colors duration-300 hover:border-gold">
-      {destination ? (
+      {image ? (
         <div className="overflow-hidden">
           <img
-            src={destination.heroImage}
-            alt={destination.name}
+            src={image}
+            alt={pkg.title}
             width={1600}
             height={1000}
             loading="lazy"

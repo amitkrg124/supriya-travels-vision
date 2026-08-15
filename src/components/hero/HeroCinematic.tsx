@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { PillLink } from "@/components/ui-editorial/PillButton";
+import heroPoster from "@/assets/sacred-journeys.jpg";
 
 const VIDEO_SRC = "https://designerstephen.github.io/public-assets/videos/serene-art-hero.mp4";
 
@@ -18,6 +19,7 @@ export function HeroCinematic() {
         className="absolute inset-0 h-full w-full object-cover"
         style={{ objectPosition: "center" }}
         src={VIDEO_SRC}
+        poster={heroPoster}
         autoPlay
         muted
         loop

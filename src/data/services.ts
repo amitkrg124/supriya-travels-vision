@@ -73,7 +73,7 @@ export const services: Service[] = [
     id: "domestic-tours",
     title: "Domestic Tour Packages",
     slug: "domestic-tours",
-    href: "/packages",
+    href: "/packages?type=domestic",
     summary: "Curated journeys across India's most loved regions.",
     description:
       "Tour packages across Kashmir, Himachal Pradesh, Kerala, Rajasthan and North East India — planned around pace, season and interest.",
@@ -83,7 +83,7 @@ export const services: Service[] = [
     id: "international-tours",
     title: "International Tour Packages",
     slug: "international-tours",
-    href: "/packages",
+    href: "/packages?type=international",
     summary: "Holidays across Asia, the Middle East and the Indian Ocean.",
     description:
       "International holiday packages to Dubai, Bali, Thailand, Singapore, Malaysia, Maldives, Mauritius, Egypt and Nepal.",

@@ -6,21 +6,16 @@ import { PackageCard } from "@/components/packages/PackageCard";
 import { CTASection } from "@/components/ui-editorial/CTASection";
 import { packages } from "@/data/packages";
 import heroImage from "@/assets/sacred-journeys.jpg";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/hajj")({
   head: () => ({
-    meta: [
-      { title: "Hajj Packages — Supriya Travels of India" },
-      {
-        name: "description",
-        content:
-          "Hajj travel arranged end to end: flights, visa processing, accommodation, transport and on-ground support.",
-      },
-      { property: "og:title", content: "Hajj Packages — Supriya Travels of India" },
-      { property: "og:description", content: "Hajj — a journey of faith, handled with care." },
-      { property: "og:url", content: "/hajj" },
-    ],
-    links: [{ rel: "canonical", href: "/hajj" }],
+    meta: createMetadata({
+      title: "Hajj Packages from Delhi | Supriya Travels of India",
+      description:
+        "Hajj travel arranged end to end: flights, visa processing, accommodation, transport and on-ground support.",
+    }),
+    links: createCanonicalLink("/hajj"),
   }),
   component: HajjPage,
 });
@@ -42,13 +37,7 @@ function HajjPage() {
       <PageHero
         tall
         eyebrow="Sacred Journeys"
-        title={
-          <>
-            Hajj — A Journey
-            <br />
-            <em className="text-gold">of Faith.</em>
-          </>
-        }
+        title="Hajj Packages from Delhi"
         intro="Professionally managed Hajj travel, organised so that the pilgrimage itself remains the focus."
         image={heroImage}
         imageAlt="Pilgrims in a mosque courtyard at dawn"

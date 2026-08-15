@@ -5,21 +5,16 @@ import { Reveal } from "@/components/animations/Reveal";
 import { DestinationCard } from "@/components/destinations/DestinationCard";
 import { CTASection } from "@/components/ui-editorial/CTASection";
 import { internationalDestinations, domesticDestinations, getDestination } from "@/data/destinations";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/destinations/")({
   head: () => ({
-    meta: [
-      { title: "Destinations — Supriya Travels of India" },
-      {
-        name: "description",
-        content:
-          "Explore international destinations including Dubai, Bali and the Maldives, and Indian destinations including Kashmir, Kerala and Rajasthan.",
-      },
-      { property: "og:title", content: "Destinations — Supriya Travels of India" },
-      { property: "og:description", content: "Fourteen destinations across India and the world." },
-      { property: "og:url", content: "/destinations" },
-    ],
-    links: [{ rel: "canonical", href: "/destinations" }],
+    meta: createMetadata({
+      title: "Destinations | Supriya Travels of India",
+      description:
+        "Explore international destinations including Dubai, Bali and the Maldives, and Indian destinations including Kashmir, Kerala and Rajasthan.",
+    }),
+    links: createCanonicalLink("/destinations"),
   }),
   component: DestinationsPage,
 });

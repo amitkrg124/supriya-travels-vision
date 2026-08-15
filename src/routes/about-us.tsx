@@ -7,21 +7,17 @@ import aboutImage from "@/assets/about-editorial.jpg";
 import sacredImage from "@/assets/sacred-journeys.jpg";
 import heroImage from "@/assets/dest-kerala.jpg";
 import { company } from "@/data/company";
+import { FounderSection } from "@/components/ui-editorial/FounderSection";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/about-us")({
   head: () => ({
-    meta: [
-      { title: "About Us — Supriya Travels of India" },
-      {
-        name: "description",
-        content:
-          "Supriya Travels of India arranges Hajj and Umrah journeys, holidays across India and abroad, tourist visas and air ticketing.",
-      },
-      { property: "og:title", content: "About Us — Supriya Travels of India" },
-      { property: "og:description", content: "Travel with purpose. Journey with confidence." },
-      { property: "og:url", content: "/about-us" },
-    ],
-    links: [{ rel: "canonical", href: "/about-us" }],
+    meta: createMetadata({
+      title: "About Supriya Travels of India | Hajj & Travel Specialists",
+      description:
+        "Supriya Travels of India arranges Hajj and Umrah journeys, holidays across India and abroad, tourist visas and air ticketing.",
+    }),
+    links: createCanonicalLink("/about-us"),
   }),
   component: AboutPage,
 });
@@ -65,6 +61,22 @@ function AboutPage() {
           <ImageReveal src={aboutImage} alt="Travel documents on a desk" className="aspect-[4/5]" width={1400} height={1750} />
         </div>
       </section>
+
+      {/* AI-Readable Factual Entity Section */}
+      <section className="bg-background pb-24 md:pb-32 pt-0">
+        <div className="shell">
+          <Reveal delay={0.1}>
+            <div className="max-w-3xl rounded-sm border border-border p-8 bg-muted/20">
+              <h2 className="font-display text-2xl text-navy">Supriya Travels of India</h2>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Supriya Travels of India is a New Delhi-based travel company providing Hajj and Umrah packages, domestic and international tours, worldwide tourist visa assistance and air ticketing services for individual travellers, families and trade partners.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <FounderSection />
 
       <section className="bg-secondary py-24 md:py-32">
         <div className="shell grid gap-10 md:grid-cols-3">

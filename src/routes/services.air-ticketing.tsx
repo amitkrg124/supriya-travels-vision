@@ -1,21 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/services/ServiceDetail";
 import heroImage from "@/assets/final-cta.jpg";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/services/air-ticketing")({
   head: () => ({
-    meta: [
-      { title: "Air Ticketing — Supriya Travels of India" },
-      {
-        name: "description",
-        content:
-          "Domestic and international air ticketing, including reissues, date changes, group bookings and multi-city routing.",
-      },
-      { property: "og:title", content: "Air Ticketing — Supriya Travels of India" },
-      { property: "og:description", content: "Domestic and international flights, handled by people you can reach." },
-      { property: "og:url", content: "/services/air-ticketing" },
-    ],
-    links: [{ rel: "canonical", href: "/services/air-ticketing" }],
+    meta: createMetadata({
+      title: "Air Ticketing Services | Supriya Travels of India",
+      description:
+        "Domestic and international air ticketing, including reissues, date changes, group bookings and multi-city routing.",
+    }),
+    links: createCanonicalLink("/services/air-ticketing"),
   }),
   component: () => (
     <ServiceDetail

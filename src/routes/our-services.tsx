@@ -6,21 +6,16 @@ import { ServiceCard } from "@/components/services/ServiceCard";
 import { CTASection } from "@/components/ui-editorial/CTASection";
 import { services } from "@/data/services";
 import heroImage from "@/assets/final-cta.jpg";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/our-services")({
   head: () => ({
-    meta: [
-      { title: "Our Services — Supriya Travels of India" },
-      {
-        name: "description",
-        content:
-          "Hajj and Umrah packages, worldwide tourist visas, domestic, international and B2B air ticketing, and tour packages across India and abroad.",
-      },
-      { property: "og:title", content: "Our Services — Supriya Travels of India" },
-      { property: "og:description", content: "Everything a journey needs, arranged by one team." },
-      { property: "og:url", content: "/our-services" },
-    ],
-    links: [{ rel: "canonical", href: "/our-services" }],
+    meta: createMetadata({
+      title: "Travel Services | Hajj, Umrah, Visa & Air Ticketing",
+      description:
+        "Hajj and Umrah packages, worldwide tourist visas, domestic, international and B2B air ticketing, and tour packages across India and abroad.",
+    }),
+    links: createCanonicalLink("/our-services"),
   }),
   component: ServicesPage,
 });
@@ -43,7 +38,7 @@ function ServicesPage() {
           <div className="mt-12">
             {services.map((s, i) => (
               <Reveal key={s.id} delay={i * 0.03}>
-                <ServiceCard service={s} index={i} />
+                <ServiceCard service={s} />
               </Reveal>
             ))}
           </div>

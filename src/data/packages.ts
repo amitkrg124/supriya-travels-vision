@@ -1,5 +1,8 @@
 export type PackageType = "domestic" | "international" | "hajj" | "umrah";
 
+import umrahImage from "@/assets/Umrah.png";
+import sacredJourneysImage from "@/assets/sacred-journeys.jpg";
+
 export type TravelPackage = {
   id: string;
   slug: string;
@@ -199,6 +202,7 @@ export const packages: TravelPackage[] = [
     meals: "As per selected plan",
     transport: "Ground transport included",
     highlights: ["Visa processing", "Accommodation", "Group coordination"],
+    image: sacredJourneysImage,
   },
   {
     id: "pkg-hajj-semi",
@@ -214,6 +218,7 @@ export const packages: TravelPackage[] = [
     meals: "As per selected plan",
     transport: "Ground transport included",
     highlights: ["Closer accommodation", "Visa processing", "Group coordination"],
+    image: sacredJourneysImage,
   },
   {
     id: "pkg-hajj-super",
@@ -229,6 +234,7 @@ export const packages: TravelPackage[] = [
     meals: "As per selected plan",
     transport: "Ground transport included",
     highlights: ["Premium accommodation", "Visa processing", "Dedicated support"],
+    image: sacredJourneysImage,
   },
   {
     id: "pkg-umrah-economy",
@@ -243,7 +249,8 @@ export const packages: TravelPackage[] = [
     flight: "Return airfare",
     meals: "As per selected plan",
     transport: "Ground transport included",
-    highlights: ["Visa processing", "Accommodation", "Transfers"],
+    highlights: ["Visa processing", "Accommodation", "Ground support"],
+    image: umrahImage,
   },
   {
     id: "pkg-umrah-semi",
@@ -258,7 +265,8 @@ export const packages: TravelPackage[] = [
     flight: "Return airfare",
     meals: "As per selected plan",
     transport: "Ground transport included",
-    highlights: ["Closer accommodation", "Visa processing", "Transfers"],
+    highlights: ["Closer accommodation", "Visa processing", "Ground support"],
+    image: umrahImage,
   },
   {
     id: "pkg-umrah-super",
@@ -274,6 +282,7 @@ export const packages: TravelPackage[] = [
     meals: "As per selected plan",
     transport: "Ground transport included",
     highlights: ["Premium accommodation", "Visa processing", "Dedicated support"],
+    image: umrahImage,
   },
 ];
 

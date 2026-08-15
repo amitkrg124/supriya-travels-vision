@@ -8,21 +8,24 @@ import { CTASection } from "@/components/ui-editorial/CTASection";
 import { packages, type PackageType } from "@/data/packages";
 import heroImage from "@/assets/dest-rajasthan.jpg";
 import { cn } from "@/lib/utils";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/packages")({
+  validateSearch: (search: Record<string, unknown>) => {
+    return {
+      q: search.q as string | undefined,
+      dest: search.dest as string | undefined,
+      dur: search.dur as string | undefined,
+      type: search.type as string | undefined,
+    }
+  },
   head: () => ({
-    meta: [
-      { title: "Current Packages — Supriya Travels of India" },
-      {
-        name: "description",
-        content:
-          "Browse Hajj, Umrah, domestic and international travel packages arranged by Supriya Travels of India.",
-      },
-      { property: "og:title", content: "Current Packages — Supriya Travels of India" },
-      { property: "og:description", content: "Hajj, Umrah, domestic and international journeys." },
-      { property: "og:url", content: "/packages" },
-    ],
-    links: [{ rel: "canonical", href: "/packages" }],
+    meta: createMetadata({
+      title: "Travel Packages | Hajj, Umrah, Domestic & International Tours",
+      description:
+        "Browse Hajj, Umrah, domestic and international travel packages arranged by Supriya Travels of India.",
+    }),
+    links: createCanonicalLink("/packages"),
   }),
   component: PackagesPage,
 });
@@ -43,9 +46,11 @@ const durations = [
 ];
 
 function PackagesPage() {
-  const [type, setType] = useState<PackageType | "all">("all");
-  const [duration, setDuration] = useState("any");
-  const [destination, setDestination] = useState("all");
+  const search = Route.useSearch();
+  const [keyword, setKeyword] = useState(search.q || "");
+  const [type, setType] = useState<PackageType | "all">((search.type as PackageType) || "all");
+  const [duration, setDuration] = useState(search.dur || "any");
+  const [destination, setDestination] = useState(search.dest || "all");
 
   const destinationOptions = useMemo(
     () => Array.from(new Set(packages.map((p) => p.destination))).sort(),
@@ -58,6 +63,12 @@ function PackagesPage() {
     if (duration === "short" && !(p.duration > 0 && p.duration <= 4)) return false;
     if (duration === "mid" && !(p.duration >= 5 && p.duration <= 6)) return false;
     if (duration === "long" && !(p.duration >= 7)) return false;
+    if (keyword) {
+      const q = keyword.toLowerCase();
+      if (!p.title.toLowerCase().includes(q) && !p.destination.toLowerCase().includes(q)) {
+        return false;
+      }
+    }
     return true;
   });
 
@@ -95,7 +106,20 @@ function PackagesPage() {
             ))}
           </div>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:w-2/3">
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            <div>
+              <label className="sr-only" htmlFor="keyword-filter">
+                Keywords
+              </label>
+              <input
+                id="keyword-filter"
+                type="text"
+                placeholder="Search keywords..."
+                className={select + " w-full"}
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
+              />
+            </div>
             <label className="sr-only" htmlFor="destination-filter">
               Destination
             </label>

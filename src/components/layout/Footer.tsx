@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Instagram, Facebook, AtSign, MapPin, Phone, Mail } from "lucide-react";
 import { company, navigation } from "@/data/company";
 import { Logo } from "./Logo";
 
@@ -41,14 +42,61 @@ export function Footer() {
       <div className="shell py-16 md:py-24">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
-            <Logo height={56} />
-            <p className="mt-6 text-sm leading-relaxed text-white/65">{company.description}</p>
+            <Logo height={100} className="md:h-[100px]" />
+            <p className="mt-8 text-sm leading-relaxed text-white/50 pr-4">{company.description}</p>
             {company.email || company.phone || company.address ? (
-              <ul className="mt-6 space-y-1 text-sm text-white/70">
-                {company.phone ? <li>{company.phone}</li> : null}
-                {company.email ? <li>{company.email}</li> : null}
-                {company.address ? <li>{company.address}</li> : null}
+              <ul className="mt-8 space-y-4 text-sm text-white/70">
+                {company.phone ? (
+                  <li className="flex items-start gap-3">
+                    <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                    <span>{company.phone}</span>
+                  </li>
+                ) : null}
+                {company.email ? (
+                  <li className="flex items-center gap-3">
+                    <Mail className="h-4 w-4 shrink-0 text-gold" />
+                    <span>{company.email}</span>
+                  </li>
+                ) : null}
+                {company.address ? (
+                  <li className="flex items-start gap-3">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                    {company.googleLocation ? (
+                      <a href={company.googleLocation} target="_blank" rel="noreferrer" className="hover:text-gold transition-colors leading-relaxed">
+                        {company.address}
+                      </a>
+                    ) : (
+                      <span className="leading-relaxed">{company.address}</span>
+                    )}
+                  </li>
+                ) : null}
               </ul>
+            ) : null}
+            
+            {company.socials && company.socials.length > 0 ? (
+              <div className="mt-8 flex flex-wrap gap-4">
+                {company.socials.map((social) => {
+                  let Icon = AtSign;
+                  if (social.label.toLowerCase().includes("instagram")) {
+                    Icon = Instagram;
+                  } else if (social.label.toLowerCase().includes("facebook")) {
+                    Icon = Facebook;
+                  }
+
+                  return (
+                    <a
+                      key={social.url}
+                      href={social.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={social.label}
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-white transition-all hover:-translate-y-1 hover:bg-gold hover:text-navy hover:shadow-lg hover:shadow-gold/20"
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  );
+                })}
+              </div>
             ) : null}
           </div>
 

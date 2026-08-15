@@ -1,20 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ServiceDetail } from "@/components/services/ServiceDetail";
 import heroImage from "@/assets/dest-singapore.jpg";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/services/b2b-air-ticketing")({
   head: () => ({
-    meta: [
-      { title: "B2B Air Ticketing — Supriya Travels of India" },
-      {
-        name: "description",
-        content: "Ticketing support for travel agents and trade partners, with direct coordination on bookings and issuance.",
-      },
-      { property: "og:title", content: "B2B Air Ticketing — Supriya Travels of India" },
-      { property: "og:description", content: "Trade ticketing support for agents and partners." },
-      { property: "og:url", content: "/services/b2b-air-ticketing" },
-    ],
-    links: [{ rel: "canonical", href: "/services/b2b-air-ticketing" }],
+    meta: createMetadata({
+      title: "B2B Air Ticketing Services | Supriya Travels of India",
+      description:
+        "Ticketing support for travel agents and trade partners, with direct coordination on bookings and issuance.",
+    }),
+    links: createCanonicalLink("/services/b2b-air-ticketing"),
   }),
   component: () => (
     <ServiceDetail

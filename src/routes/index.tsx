@@ -13,24 +13,19 @@ import { services } from "@/data/services";
 import { company } from "@/data/company";
 import aboutImage from "@/assets/about-editorial.jpg";
 import sacredImage from "@/assets/sacred-journeys.jpg";
+import { CircularGallery } from "@/components/ui/CircularGallery";
+import { Testimonials } from "@/components/ui/Testimonials";
+import { SearchBox } from "@/components/ui/SearchBox";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Supriya Travels of India — Hajj, Umrah & Global Journeys" },
-      {
-        name: "description",
-        content:
-          "Hajj and Umrah packages, domestic and international tours, worldwide tourist visas and air ticketing, planned with care by Supriya Travels of India.",
-      },
-      { property: "og:title", content: "Supriya Travels of India — Hajj, Umrah & Global Journeys" },
-      {
-        property: "og:description",
-        content: "Travel with comfort, care and confidence. Sacred journeys, holidays, visas and ticketing.",
-      },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
+    meta: createMetadata({
+      title: "Supriya Travels of India | Hajj, Umrah & Global Travel",
+      description:
+        "Supriya Travels of India offers Hajj and Umrah packages, domestic and international tours, worldwide tourist visas and air ticketing services from New Delhi.",
+    }),
+    links: createCanonicalLink("/"),
   }),
   component: Home,
 });
@@ -60,6 +55,13 @@ function Home() {
     <>
       <HeroCinematic />
 
+      {/* SEARCH BOX OVERLAP */}
+      <div className="relative z-10 shell -mt-10 sm:-mt-16 px-4 md:px-0">
+        <Reveal delay={0.2}>
+          <SearchBox />
+        </Reveal>
+      </div>
+
       {/* ACT 2 — TRUST */}
       <section className="bg-background py-24 md:py-36">
         <div className="shell grid gap-14 lg:grid-cols-[1fr_0.85fr] lg:items-center lg:gap-24">
@@ -73,7 +75,7 @@ function Home() {
                   <em className="text-gold">A Journey You Can Trust.</em>
                 </>
               }
-              intro="At Supriya Travels of India, every journey is planned with care, professionalism and attention to detail. From sacred Hajj and Umrah journeys to domestic holidays and international escapes, we help travellers move through every stage of their journey with confidence."
+              intro="Supriya Travels of India is a New Delhi-based travel company providing Hajj and Umrah packages, domestic and international tours, worldwide tourist visa assistance and air ticketing services for individual travellers, families and trade partners."
             />
             <Reveal delay={0.1} className="mt-10">
               <PillLink to="/about-us" variant="outline" className="text-navy">
@@ -153,9 +155,29 @@ function Home() {
           <div className="mt-12">
             {services.map((s, i) => (
               <Reveal key={s.id} delay={i * 0.03}>
-                <ServiceCard service={s} index={i} />
+                <ServiceCard service={s} />
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CIRCULAR GALLERY DESTINATIONS */}
+      <section className="bg-navy py-12 md:py-16">
+        <div className="shell flex flex-col items-center">
+          <SectionHeading eyebrow="Explore" title="Discover Our Destinations" tone="light" />
+          <div 
+            className="w-full h-[60vh] md:h-[70vh] relative rounded-[40px] shadow-2xl mt-10 overflow-hidden bg-navy-deep/50 border border-white/10"
+            style={{ padding: '40px' }}
+          >
+            <CircularGallery 
+              items={destinations.map(d => ({ image: d.heroImage, text: d.name }))}
+              bend={3}
+              textColor="#ffffff"
+              borderRadius={0.05}
+              scrollEase={0.04}
+              scrollSpeed={2}
+            />
           </div>
         </div>
       </section>
@@ -253,6 +275,8 @@ function Home() {
         </div>
       </section>
 
+      <Testimonials />
+      
       <CTASection />
     </>
   );

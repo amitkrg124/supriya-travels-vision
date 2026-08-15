@@ -5,22 +5,17 @@ import { Reveal } from "@/components/animations/Reveal";
 import { PackageCard } from "@/components/packages/PackageCard";
 import { CTASection } from "@/components/ui-editorial/CTASection";
 import { packages } from "@/data/packages";
-import heroImage from "@/assets/umrah.jpg";
+import heroImage from "@/assets/Umrah.png";
+import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/umrah")({
   head: () => ({
-    meta: [
-      { title: "Umrah Packages — Supriya Travels of India" },
-      {
-        name: "description",
-        content:
-          "Umrah packages across economy, semi deluxe and super deluxe categories, with flights, visa, accommodation and transfers arranged.",
-      },
-      { property: "og:title", content: "Umrah Packages — Supriya Travels of India" },
-      { property: "og:description", content: "Begin your Umrah journey with support at every stage." },
-      { property: "og:url", content: "/umrah" },
-    ],
-    links: [{ rel: "canonical", href: "/umrah" }],
+    meta: createMetadata({
+      title: "Umrah Packages from Delhi | Supriya Travels of India",
+      description:
+        "Umrah packages across economy, semi deluxe and super deluxe categories, with flights, visa, accommodation and transfers arranged.",
+    }),
+    links: createCanonicalLink("/umrah"),
   }),
   component: UmrahPage,
 });
@@ -41,13 +36,7 @@ function UmrahPage() {
       <PageHero
         tall
         eyebrow="Sacred Journeys"
-        title={
-          <>
-            Begin Your
-            <br />
-            <em className="text-gold">Umrah Journey.</em>
-          </>
-        }
+        title="Umrah Packages from Delhi"
         intro="Umrah travel arranged around your dates, with the documentation and logistics taken care of."
         image={heroImage}
         imageAlt="Lantern-lit mosque arcade at night"
