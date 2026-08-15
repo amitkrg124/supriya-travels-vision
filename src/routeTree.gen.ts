@@ -15,6 +15,9 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HajjRouteImport } from './routes/hajj'
 import { Route as OurServicesRouteImport } from './routes/our-services'
 import { Route as PackagesRouteImport } from './routes/packages'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as UmrahRouteImport } from './routes/umrah'
 import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
 import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
@@ -50,6 +53,21 @@ const OurServicesRoute = OurServicesRouteImport.update({
 const PackagesRoute = PackagesRouteImport.update({
   id: '/packages',
   path: '/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundPolicyRoute = RefundPolicyRouteImport.update({
+  id: '/refund-policy',
+  path: '/refund-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const UmrahRoute = UmrahRouteImport.update({
@@ -90,6 +108,9 @@ export interface FileRoutesByFullPath {
   '/hajj': typeof HajjRoute
   '/our-services': typeof OurServicesRoute
   '/packages': typeof PackagesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/terms': typeof TermsRoute
   '/umrah': typeof UmrahRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/services/air-ticketing': typeof ServicesAirTicketingRoute
@@ -104,6 +125,9 @@ export interface FileRoutesByTo {
   '/hajj': typeof HajjRoute
   '/our-services': typeof OurServicesRoute
   '/packages': typeof PackagesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/terms': typeof TermsRoute
   '/umrah': typeof UmrahRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/services/air-ticketing': typeof ServicesAirTicketingRoute
@@ -119,6 +143,9 @@ export interface FileRoutesById {
   '/hajj': typeof HajjRoute
   '/our-services': typeof OurServicesRoute
   '/packages': typeof PackagesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/terms': typeof TermsRoute
   '/umrah': typeof UmrahRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
   '/services/air-ticketing': typeof ServicesAirTicketingRoute
@@ -135,6 +162,9 @@ export interface FileRouteTypes {
     | '/hajj'
     | '/our-services'
     | '/packages'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/terms'
     | '/umrah'
     | '/destinations/$slug'
     | '/services/air-ticketing'
@@ -149,6 +179,9 @@ export interface FileRouteTypes {
     | '/hajj'
     | '/our-services'
     | '/packages'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/terms'
     | '/umrah'
     | '/destinations/$slug'
     | '/services/air-ticketing'
@@ -163,6 +196,9 @@ export interface FileRouteTypes {
     | '/hajj'
     | '/our-services'
     | '/packages'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/terms'
     | '/umrah'
     | '/destinations/$slug'
     | '/services/air-ticketing'
@@ -178,6 +214,9 @@ export interface RootRouteChildren {
   HajjRoute: typeof HajjRoute
   OurServicesRoute: typeof OurServicesRoute
   PackagesRoute: typeof PackagesRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RefundPolicyRoute: typeof RefundPolicyRoute
+  TermsRoute: typeof TermsRoute
   UmrahRoute: typeof UmrahRoute
   DestinationsSlugRoute: typeof DestinationsSlugRoute
   ServicesAirTicketingRoute: typeof ServicesAirTicketingRoute
@@ -228,6 +267,27 @@ declare module '@tanstack/react-router' {
       path: '/packages'
       fullPath: '/packages'
       preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund-policy': {
+      id: '/refund-policy'
+      path: '/refund-policy'
+      fullPath: '/refund-policy'
+      preLoaderRoute: typeof RefundPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/umrah': {
@@ -282,6 +342,9 @@ const rootRouteChildren: RootRouteChildren = {
   HajjRoute: HajjRoute,
   OurServicesRoute: OurServicesRoute,
   PackagesRoute: PackagesRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RefundPolicyRoute: RefundPolicyRoute,
+  TermsRoute: TermsRoute,
   UmrahRoute: UmrahRoute,
   DestinationsSlugRoute: DestinationsSlugRoute,
   ServicesAirTicketingRoute: ServicesAirTicketingRoute,
