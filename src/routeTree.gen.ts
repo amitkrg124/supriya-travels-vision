@@ -18,6 +18,9 @@ import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as UmrahRouteImport } from './routes/umrah'
 import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
 import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
+import { Route as ServicesAirTicketingRouteImport } from './routes/services.air-ticketing'
+import { Route as ServicesB2bAirTicketingRouteImport } from './routes/services.b2b-air-ticketing'
+import { Route as ServicesTouristVisasRouteImport } from './routes/services.tourist-visas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,6 +67,21 @@ const DestinationsSlugRoute = DestinationsSlugRouteImport.update({
   path: '/destinations/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesAirTicketingRoute = ServicesAirTicketingRouteImport.update({
+  id: '/services/air-ticketing',
+  path: '/services/air-ticketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesB2bAirTicketingRoute = ServicesB2bAirTicketingRouteImport.update({
+  id: '/services/b2b-air-ticketing',
+  path: '/services/b2b-air-ticketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesTouristVisasRoute = ServicesTouristVisasRouteImport.update({
+  id: '/services/tourist-visas',
+  path: '/services/tourist-visas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -74,6 +92,9 @@ export interface FileRoutesByFullPath {
   '/packages': typeof PackagesRoute
   '/umrah': typeof UmrahRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
+  '/services/air-ticketing': typeof ServicesAirTicketingRoute
+  '/services/b2b-air-ticketing': typeof ServicesB2bAirTicketingRoute
+  '/services/tourist-visas': typeof ServicesTouristVisasRoute
   '/destinations/': typeof DestinationsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -85,6 +106,9 @@ export interface FileRoutesByTo {
   '/packages': typeof PackagesRoute
   '/umrah': typeof UmrahRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
+  '/services/air-ticketing': typeof ServicesAirTicketingRoute
+  '/services/b2b-air-ticketing': typeof ServicesB2bAirTicketingRoute
+  '/services/tourist-visas': typeof ServicesTouristVisasRoute
   '/destinations': typeof DestinationsIndexRoute
 }
 export interface FileRoutesById {
@@ -97,6 +121,9 @@ export interface FileRoutesById {
   '/packages': typeof PackagesRoute
   '/umrah': typeof UmrahRoute
   '/destinations/$slug': typeof DestinationsSlugRoute
+  '/services/air-ticketing': typeof ServicesAirTicketingRoute
+  '/services/b2b-air-ticketing': typeof ServicesB2bAirTicketingRoute
+  '/services/tourist-visas': typeof ServicesTouristVisasRoute
   '/destinations/': typeof DestinationsIndexRoute
 }
 export interface FileRouteTypes {
@@ -110,6 +137,9 @@ export interface FileRouteTypes {
     | '/packages'
     | '/umrah'
     | '/destinations/$slug'
+    | '/services/air-ticketing'
+    | '/services/b2b-air-ticketing'
+    | '/services/tourist-visas'
     | '/destinations/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -121,6 +151,9 @@ export interface FileRouteTypes {
     | '/packages'
     | '/umrah'
     | '/destinations/$slug'
+    | '/services/air-ticketing'
+    | '/services/b2b-air-ticketing'
+    | '/services/tourist-visas'
     | '/destinations'
   id:
     | '__root__'
@@ -132,6 +165,9 @@ export interface FileRouteTypes {
     | '/packages'
     | '/umrah'
     | '/destinations/$slug'
+    | '/services/air-ticketing'
+    | '/services/b2b-air-ticketing'
+    | '/services/tourist-visas'
     | '/destinations/'
   fileRoutesById: FileRoutesById
 }
@@ -144,6 +180,9 @@ export interface RootRouteChildren {
   PackagesRoute: typeof PackagesRoute
   UmrahRoute: typeof UmrahRoute
   DestinationsSlugRoute: typeof DestinationsSlugRoute
+  ServicesAirTicketingRoute: typeof ServicesAirTicketingRoute
+  ServicesB2bAirTicketingRoute: typeof ServicesB2bAirTicketingRoute
+  ServicesTouristVisasRoute: typeof ServicesTouristVisasRoute
   DestinationsIndexRoute: typeof DestinationsIndexRoute
 }
 
@@ -212,6 +251,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DestinationsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/air-ticketing': {
+      id: '/services/air-ticketing'
+      path: '/services/air-ticketing'
+      fullPath: '/services/air-ticketing'
+      preLoaderRoute: typeof ServicesAirTicketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/b2b-air-ticketing': {
+      id: '/services/b2b-air-ticketing'
+      path: '/services/b2b-air-ticketing'
+      fullPath: '/services/b2b-air-ticketing'
+      preLoaderRoute: typeof ServicesB2bAirTicketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/tourist-visas': {
+      id: '/services/tourist-visas'
+      path: '/services/tourist-visas'
+      fullPath: '/services/tourist-visas'
+      preLoaderRoute: typeof ServicesTouristVisasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -224,6 +284,9 @@ const rootRouteChildren: RootRouteChildren = {
   PackagesRoute: PackagesRoute,
   UmrahRoute: UmrahRoute,
   DestinationsSlugRoute: DestinationsSlugRoute,
+  ServicesAirTicketingRoute: ServicesAirTicketingRoute,
+  ServicesB2bAirTicketingRoute: ServicesB2bAirTicketingRoute,
+  ServicesTouristVisasRoute: ServicesTouristVisasRoute,
   DestinationsIndexRoute: DestinationsIndexRoute,
 }
 export const routeTree = rootRouteImport
