@@ -10,33 +10,219 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutUsRouteImport } from './routes/about-us'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as HajjRouteImport } from './routes/hajj'
+import { Route as OurServicesRouteImport } from './routes/our-services'
+import { Route as PackagesRouteImport } from './routes/packages'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as UmrahRouteImport } from './routes/umrah'
+import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
+import { Route as DestinationsSlugRouteImport } from './routes/destinations.$slug'
+import { Route as ServicesAirTicketingRouteImport } from './routes/services.air-ticketing'
+import { Route as ServicesB2bAirTicketingRouteImport } from './routes/services.b2b-air-ticketing'
+import { Route as ServicesTouristVisasRouteImport } from './routes/services.tourist-visas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutUsRoute = AboutUsRouteImport.update({
+  id: '/about-us',
+  path: '/about-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HajjRoute = HajjRouteImport.update({
+  id: '/hajj',
+  path: '/hajj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurServicesRoute = OurServicesRouteImport.update({
+  id: '/our-services',
+  path: '/our-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundPolicyRoute = RefundPolicyRouteImport.update({
+  id: '/refund-policy',
+  path: '/refund-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UmrahRoute = UmrahRouteImport.update({
+  id: '/umrah',
+  path: '/umrah',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
+  id: '/destinations/',
+  path: '/destinations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsSlugRoute = DestinationsSlugRouteImport.update({
+  id: '/destinations/$slug',
+  path: '/destinations/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesAirTicketingRoute = ServicesAirTicketingRouteImport.update({
+  id: '/services/air-ticketing',
+  path: '/services/air-ticketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesB2bAirTicketingRoute = ServicesB2bAirTicketingRouteImport.update({
+  id: '/services/b2b-air-ticketing',
+  path: '/services/b2b-air-ticketing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesTouristVisasRoute = ServicesTouristVisasRouteImport.update({
+  id: '/services/tourist-visas',
+  path: '/services/tourist-visas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
+  '/contact': typeof ContactRoute
+  '/hajj': typeof HajjRoute
+  '/our-services': typeof OurServicesRoute
+  '/packages': typeof PackagesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/terms': typeof TermsRoute
+  '/umrah': typeof UmrahRoute
+  '/destinations/$slug': typeof DestinationsSlugRoute
+  '/services/air-ticketing': typeof ServicesAirTicketingRoute
+  '/services/b2b-air-ticketing': typeof ServicesB2bAirTicketingRoute
+  '/services/tourist-visas': typeof ServicesTouristVisasRoute
+  '/destinations/': typeof DestinationsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
+  '/contact': typeof ContactRoute
+  '/hajj': typeof HajjRoute
+  '/our-services': typeof OurServicesRoute
+  '/packages': typeof PackagesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/terms': typeof TermsRoute
+  '/umrah': typeof UmrahRoute
+  '/destinations/$slug': typeof DestinationsSlugRoute
+  '/services/air-ticketing': typeof ServicesAirTicketingRoute
+  '/services/b2b-air-ticketing': typeof ServicesB2bAirTicketingRoute
+  '/services/tourist-visas': typeof ServicesTouristVisasRoute
+  '/destinations': typeof DestinationsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
+  '/contact': typeof ContactRoute
+  '/hajj': typeof HajjRoute
+  '/our-services': typeof OurServicesRoute
+  '/packages': typeof PackagesRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/terms': typeof TermsRoute
+  '/umrah': typeof UmrahRoute
+  '/destinations/$slug': typeof DestinationsSlugRoute
+  '/services/air-ticketing': typeof ServicesAirTicketingRoute
+  '/services/b2b-air-ticketing': typeof ServicesB2bAirTicketingRoute
+  '/services/tourist-visas': typeof ServicesTouristVisasRoute
+  '/destinations/': typeof DestinationsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about-us'
+    | '/contact'
+    | '/hajj'
+    | '/our-services'
+    | '/packages'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/terms'
+    | '/umrah'
+    | '/destinations/$slug'
+    | '/services/air-ticketing'
+    | '/services/b2b-air-ticketing'
+    | '/services/tourist-visas'
+    | '/destinations/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about-us'
+    | '/contact'
+    | '/hajj'
+    | '/our-services'
+    | '/packages'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/terms'
+    | '/umrah'
+    | '/destinations/$slug'
+    | '/services/air-ticketing'
+    | '/services/b2b-air-ticketing'
+    | '/services/tourist-visas'
+    | '/destinations'
+  id:
+    | '__root__'
+    | '/'
+    | '/about-us'
+    | '/contact'
+    | '/hajj'
+    | '/our-services'
+    | '/packages'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/terms'
+    | '/umrah'
+    | '/destinations/$slug'
+    | '/services/air-ticketing'
+    | '/services/b2b-air-ticketing'
+    | '/services/tourist-visas'
+    | '/destinations/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutUsRoute: typeof AboutUsRoute
+  ContactRoute: typeof ContactRoute
+  HajjRoute: typeof HajjRoute
+  OurServicesRoute: typeof OurServicesRoute
+  PackagesRoute: typeof PackagesRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RefundPolicyRoute: typeof RefundPolicyRoute
+  TermsRoute: typeof TermsRoute
+  UmrahRoute: typeof UmrahRoute
+  DestinationsSlugRoute: typeof DestinationsSlugRoute
+  ServicesAirTicketingRoute: typeof ServicesAirTicketingRoute
+  ServicesB2bAirTicketingRoute: typeof ServicesB2bAirTicketingRoute
+  ServicesTouristVisasRoute: typeof ServicesTouristVisasRoute
+  DestinationsIndexRoute: typeof DestinationsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +234,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about-us': {
+      id: '/about-us'
+      path: '/about-us'
+      fullPath: '/about-us'
+      preLoaderRoute: typeof AboutUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hajj': {
+      id: '/hajj'
+      path: '/hajj'
+      fullPath: '/hajj'
+      preLoaderRoute: typeof HajjRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-services': {
+      id: '/our-services'
+      path: '/our-services'
+      fullPath: '/our-services'
+      preLoaderRoute: typeof OurServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund-policy': {
+      id: '/refund-policy'
+      path: '/refund-policy'
+      fullPath: '/refund-policy'
+      preLoaderRoute: typeof RefundPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/umrah': {
+      id: '/umrah'
+      path: '/umrah'
+      fullPath: '/umrah'
+      preLoaderRoute: typeof UmrahRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations/': {
+      id: '/destinations/'
+      path: '/destinations'
+      fullPath: '/destinations/'
+      preLoaderRoute: typeof DestinationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations/$slug': {
+      id: '/destinations/$slug'
+      path: '/destinations/$slug'
+      fullPath: '/destinations/$slug'
+      preLoaderRoute: typeof DestinationsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/air-ticketing': {
+      id: '/services/air-ticketing'
+      path: '/services/air-ticketing'
+      fullPath: '/services/air-ticketing'
+      preLoaderRoute: typeof ServicesAirTicketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/b2b-air-ticketing': {
+      id: '/services/b2b-air-ticketing'
+      path: '/services/b2b-air-ticketing'
+      fullPath: '/services/b2b-air-ticketing'
+      preLoaderRoute: typeof ServicesB2bAirTicketingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/tourist-visas': {
+      id: '/services/tourist-visas'
+      path: '/services/tourist-visas'
+      fullPath: '/services/tourist-visas'
+      preLoaderRoute: typeof ServicesTouristVisasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutUsRoute: AboutUsRoute,
+  ContactRoute: ContactRoute,
+  HajjRoute: HajjRoute,
+  OurServicesRoute: OurServicesRoute,
+  PackagesRoute: PackagesRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RefundPolicyRoute: RefundPolicyRoute,
+  TermsRoute: TermsRoute,
+  UmrahRoute: UmrahRoute,
+  DestinationsSlugRoute: DestinationsSlugRoute,
+  ServicesAirTicketingRoute: ServicesAirTicketingRoute,
+  ServicesB2bAirTicketingRoute: ServicesB2bAirTicketingRoute,
+  ServicesTouristVisasRoute: ServicesTouristVisasRoute,
+  DestinationsIndexRoute: DestinationsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
