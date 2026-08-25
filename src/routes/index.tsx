@@ -1,19 +1,16 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { HeroCinematic } from "@/components/hero/HeroCinematic";
+import { createFileRoute } from "@tanstack/react-router";
+import { Hero3DPortal } from "@/components/hero/Hero3DPortal";
+import { HiddenGemsHorizontal } from "@/components/destinations/HiddenGemsHorizontal";
+import { PromiseSection } from "@/components/ui-editorial/PromiseSection";
+import { PopularDestinationsSection } from "@/components/destinations/PopularDestinationsSection";
 import { SectionHeading, Eyebrow } from "@/components/ui-editorial/SectionHeading";
 import { Reveal, ImageReveal } from "@/components/animations/Reveal";
 import { PillLink } from "@/components/ui-editorial/PillButton";
 import { CTASection } from "@/components/ui-editorial/CTASection";
-import { DestinationCard } from "@/components/destinations/DestinationCard";
-import { PackageCard } from "@/components/packages/PackageCard";
 import { ServiceCard } from "@/components/services/ServiceCard";
-import { destinations, getDestination } from "@/data/destinations";
-import { packages } from "@/data/packages";
 import { services } from "@/data/services";
 import { company } from "@/data/company";
 import aboutImage from "@/assets/about-editorial.jpg";
-import sacredImage from "@/assets/sacred-journeys.jpg";
-import { CircularGallery } from "@/components/ui/CircularGallery";
 import { Testimonials } from "@/components/ui/Testimonials";
 import { SearchBox } from "@/components/ui/SearchBox";
 import { createMetadata, createCanonicalLink } from "@/lib/seo";
@@ -45,24 +42,19 @@ const reasons = [
 ];
 
 function Home() {
-  const dubai = getDestination("dubai")!;
-  const kashmir = getDestination("kashmir")!;
-  const intlSmall = ["bali", "maldives", "thailand"].map((s) => getDestination(s)!);
-  const domSmall = ["kerala", "rajasthan", "himachal-pradesh"].map((s) => getDestination(s)!);
-  const featured = packages.filter((p) => ["pkg-dubai-city", "pkg-kashmir", "pkg-maldives"].includes(p.id));
-
   return (
     <>
-      <HeroCinematic />
+      {/* 1. 3D HERO PORTAL (300vh SCROLL TRACK) */}
+      <Hero3DPortal />
 
-      {/* SEARCH BOX OVERLAP */}
-      <div className="relative z-10 shell -mt-10 sm:-mt-16 px-4 md:px-0">
+      {/* 2. SEARCH BOX OVERLAP */}
+      <div className="relative z-20 shell -mt-10 sm:-mt-16 px-4 md:px-0">
         <Reveal delay={0.2}>
           <SearchBox />
         </Reveal>
       </div>
 
-      {/* ACT 2 — TRUST */}
+      {/* 3. ABOUT / TRUST & HERITAGE */}
       <section className="bg-background py-24 md:py-36">
         <div className="shell grid gap-14 lg:grid-cols-[1fr_0.85fr] lg:items-center lg:gap-24">
           <div>
@@ -104,48 +96,16 @@ function Home() {
         </div>
       </section>
 
-      {/* ACT 3 — SACRED JOURNEYS */}
-      <section className="relative overflow-hidden bg-navy">
-        <div className="grid lg:grid-cols-2">
-          <div className="relative min-h-[380px] lg:min-h-[640px]">
-            <img
-              src={sacredImage}
-              alt="Pilgrims walking through a mosque courtyard at dawn"
-              width={1600}
-              height={1100}
-              loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div aria-hidden className="absolute inset-0 bg-navy-deep/25" />
-          </div>
-          <div className="flex items-center px-6 py-20 md:px-16 md:py-28">
-            <div className="max-w-xl">
-              <SectionHeading
-                eyebrow="Sacred Journeys"
-                tone="light"
-                title={
-                  <>
-                    A Journey of Faith,
-                    <br />
-                    <em className="text-gold">Handled With Care.</em>
-                  </>
-                }
-                intro="Supriya Travels of India provides professionally managed Hajj and Umrah travel services designed to make the pilgrimage journey organised, comfortable and supported from departure to return."
-              />
-              <Reveal delay={0.1} className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <PillLink to="/hajj" variant="gold">
-                  Explore Hajj
-                </PillLink>
-                <PillLink to="/umrah" variant="ghostLight">
-                  Explore Umrah
-                </PillLink>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 4. HIDDEN GEMS & SIGNATURE PACKAGES (500vh HORIZONTAL SCROLL) */}
+      <HiddenGemsHorizontal />
 
-      {/* CORE SERVICES */}
+      {/* 5. THE PROMISE (DYNAMIC CLIP-PATH REVEAL) */}
+      <PromiseSection />
+
+      {/* 6. POPULAR DESTINATIONS (CUSTOM 80px SCROLLBAR TRACK & CATEGORY FILTERS) */}
+      <PopularDestinationsSection />
+
+      {/* 7. CORE SERVICES (WHAT WE DO) */}
       <section className="bg-secondary py-24 md:py-32">
         <div className="shell">
           <SectionHeading
@@ -162,88 +122,7 @@ function Home() {
         </div>
       </section>
 
-      {/* CIRCULAR GALLERY DESTINATIONS */}
-      <section className="bg-navy py-12 md:py-16">
-        <div className="shell flex flex-col items-center">
-          <SectionHeading eyebrow="Explore" title="Discover Our Destinations" tone="light" />
-          <div 
-            className="w-full h-[60vh] md:h-[70vh] relative rounded-[40px] shadow-2xl mt-10 overflow-hidden bg-navy-deep/50 border border-white/10"
-            style={{ padding: '40px' }}
-          >
-            <CircularGallery 
-              items={destinations.map(d => ({ image: d.heroImage, text: d.name }))}
-              bend={3}
-              textColor="#ffffff"
-              borderRadius={0.05}
-              scrollEase={0.04}
-              scrollSpeed={2}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ACT 4 — DESTINATIONS */}
-      <section className="bg-background py-24 md:py-32">
-        <div className="shell">
-          <SectionHeading eyebrow="International" title="Where Will Your Journey Take You?" />
-
-          <div className="mt-14 grid gap-5 lg:grid-cols-[1.35fr_1fr]">
-            <Reveal>
-              <DestinationCard destination={dubai} size="large" />
-            </Reveal>
-            <div className="grid gap-5">
-              {intlSmall.map((d, i) => (
-                <Reveal key={d.slug} delay={0.05 * (i + 1)}>
-                  <DestinationCard destination={d} />
-                </Reveal>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-24">
-            <SectionHeading eyebrow="Domestic" title="Closer to home, no less remarkable." />
-            <div className="mt-14 grid gap-5 lg:grid-cols-[1fr_1.35fr]">
-              <div className="grid gap-5">
-                {domSmall.map((d, i) => (
-                  <Reveal key={d.slug} delay={0.05 * i}>
-                    <DestinationCard destination={d} />
-                  </Reveal>
-                ))}
-              </div>
-              <Reveal>
-                <DestinationCard destination={kashmir} size="large" className="h-full" />
-              </Reveal>
-            </div>
-          </div>
-
-          <Reveal className="mt-14">
-            <Link to="/destinations" className="link-gold font-display text-2xl text-navy">
-              View all {destinations.length} destinations →
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ACT 5 — PACKAGES */}
-      <section className="bg-secondary py-24 md:py-32">
-        <div className="shell">
-          <SectionHeading eyebrow="Featured Packages" title="A few journeys to begin with." />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {featured.map((p, i) => (
-              <Reveal key={p.id} delay={i * 0.06}>
-                <PackageCard pkg={p} />
-              </Reveal>
-            ))}
-          </div>
-          <Reveal className="mt-12">
-            <PillLink to="/packages" variant="outline" className="text-navy">
-              See all packages
-            </PillLink>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ACT 6 — WHY CHOOSE US + PROCESS */}
+      {/* 8. WHY CHOOSE US + THE JOURNEY PROCESS */}
       <section className="bg-navy py-24 text-white md:py-32">
         <div className="shell grid gap-16 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
@@ -275,8 +154,10 @@ function Home() {
         </div>
       </section>
 
+      {/* 9. TESTIMONIALS */}
       <Testimonials />
-      
+
+      {/* 10. CALL TO ACTION */}
       <CTASection />
     </>
   );
