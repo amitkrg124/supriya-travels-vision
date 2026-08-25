@@ -35,8 +35,8 @@ export function Header() {
             : "border-b border-transparent bg-transparent",
         )}
       >
-        <div className="shell grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-4 md:grid-cols-3 md:py-6">
-          <Logo height={90} className="md:h-[90px]" />
+        <div className="shell flex items-center justify-between gap-4 py-2.5 sm:py-3.5 md:py-4">
+          <Logo className="h-10 sm:h-12 md:h-14 lg:h-16" />
 
           <nav aria-label="Primary" className="hidden justify-center md:flex">
             <ul className="flex items-center gap-8 lg:gap-10">
