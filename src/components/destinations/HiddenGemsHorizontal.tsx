@@ -22,7 +22,7 @@ const GEMS_DATA: GemItem[] = [
     tagline: "5-Star Haram view hospitality, guided ziyarat & seamless visa support.",
     location: "Saudi Arabia",
     duration: "15 Days / 14 Nights",
-    price: "₹85,000",
+    price: "₹1,10,000",
     image:
       "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=1600&auto=format&fit=crop",
     link: "/umrah",
@@ -35,7 +35,7 @@ const GEMS_DATA: GemItem[] = [
     tagline: "Dal Lake Shikara rides, Gulmarg snow meadows & Pahalgam pine valleys.",
     location: "Jammu & Kashmir, India",
     duration: "6 Days / 5 Nights",
-    price: "₹24,500",
+    price: "₹14,000",
     image:
       "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1600&auto=format&fit=crop",
     link: "/destinations/kashmir",
@@ -48,7 +48,7 @@ const GEMS_DATA: GemItem[] = [
     tagline: "Burj Khalifa vistas, luxury yacht marina cruises & thrilling desert safari.",
     location: "United Arab Emirates",
     duration: "5 Days / 4 Nights",
-    price: "₹48,000",
+    price: "₹55,000",
     image:
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop",
     link: "/destinations/dubai",
@@ -74,7 +74,7 @@ const GEMS_DATA: GemItem[] = [
     tagline: "Crystal lagoons, private water villas & vibrant coral reef excursions.",
     location: "Maldives",
     duration: "5 Days / 4 Nights",
-    price: "₹82,000",
+    price: "₹64,000",
     image:
       "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1600&auto=format&fit=crop",
     link: "/destinations/maldives",
