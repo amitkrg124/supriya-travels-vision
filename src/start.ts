@@ -1,5 +1,4 @@
-import { createStart, createCsrfMiddleware, createMiddleware } from "@tanstack/react-start";
-
+import { createStart, createMiddleware } from "@tanstack/react-start";
 import { renderErrorPage } from "./lib/error-page";
 
 const errorMiddleware = createMiddleware().server(async ({ next }) => {
@@ -17,18 +16,6 @@ const errorMiddleware = createMiddleware().server(async ({ next }) => {
   }
 });
 
-// Start installs this automatically when src/start.ts is absent; defining the
-// file opts out, so re-add it if available to keep server functions protected
-// from cross-site requests.
-const csrfMiddleware =
-  typeof createCsrfMiddleware === "function"
-    ? createCsrfMiddleware({
-        filter: (ctx) => ctx.handlerType === "serverFn",
-      })
-    : undefined;
-
-const middleware = [errorMiddleware, ...(csrfMiddleware ? [csrfMiddleware] : [])];
-
 export const startInstance = createStart(() => ({
-  requestMiddleware: middleware,
+  requestMiddleware: [errorMiddleware],
 }));
