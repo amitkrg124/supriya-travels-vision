@@ -4,7 +4,7 @@ import { z } from "zod";
 import { useState } from "react";
 import { PillButton } from "@/components/ui-editorial/PillButton";
 import { destinations } from "@/data/destinations";
-import { submitContactEnquiry, type ContactEnquiryResponse } from "@/actions/contact";
+import { company } from "@/data/company";
 
 const schema = z.object({
   name: z.string().min(2, "Please enter your name"),
@@ -15,7 +15,6 @@ const schema = z.object({
   travelDate: z.string().optional(),
   travellers: z.string().optional(),
   message: z.string().max(1000).optional(),
-  hp: z.string().optional(),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -25,9 +24,12 @@ const field =
 const labelCls = "block text-[12px] font-medium uppercase tracking-[0.12em] text-muted-foreground";
 
 export function ContactForm() {
-  const [submissionResult, setSubmissionResult] = useState<ContactEnquiryResponse | null>(null);
-  const [failed, setFailed] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [sent, setSent] = useState(false);
+  const [lastSubmission, setLastSubmission] = useState<{
+    reference: string;
+    whatsappUrl: string;
+    mailUrl: string;
+  } | null>(null);
 
   const {
     register,
@@ -36,114 +38,130 @@ export function ContactForm() {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
-    defaultValues: {
-      travelType: "",
-      destination: "",
-      travelDate: "",
-      travellers: "1",
-      message: "",
-      hp: "",
-    },
+    defaultValues: { travelType: "" },
   });
 
   const onSubmit = async (values: FormValues) => {
-    try {
-      setFailed(false);
-      setErrorMessage("");
-      const result = await submitContactEnquiry({ data: values });
-      if (result && result.success) {
-        setSubmissionResult(result);
-        reset();
-      } else {
-        setFailed(true);
-        setErrorMessage(result?.message || "Could not process your enquiry. Please try again.");
-      }
-    } catch (err: unknown) {
-      console.error("Submission failed:", err);
-      setFailed(true);
-      setErrorMessage(
-        err instanceof Error ? err.message : "Something went wrong. Please try again or reach us on WhatsApp."
-      );
-    }
+    // Generate unique reference code
+    const reference = `ST-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+
+    const text = `*New Travel Enquiry - Supriya Travels*\nRef: ${reference}\nName: ${values.name}\nPhone: ${values.phone}\nEmail: ${values.email}\nTravel Type: ${values.travelType}\nDestination: ${values.destination || "Not decided"}\nTravel Date: ${values.travelDate || "Flexible"}\nTravellers: ${values.travellers || "1"}\nMessage: ${values.message || "N/A"}`;
+
+    const cleanPhone = company.phone.primary.replace(/[^0-9]/g, "");
+    const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(text)}`;
+    const mailUrl = `mailto:supriyatravelsindia@gmail.com?subject=${encodeURIComponent(
+      `New Enquiry [${reference}] - ${values.name} (${values.travelType})`
+    )}&body=${encodeURIComponent(text)}`;
+
+    setLastSubmission({ reference, whatsappUrl, mailUrl });
+    setSent(true);
+    reset();
   };
 
-  if (submissionResult) {
+  if (sent && lastSubmission) {
     return (
-      <div className="border border-gold/40 bg-secondary p-8 md:p-10 text-center" role="status">
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold/15 text-gold text-2xl font-serif">
-          ✓
-        </div>
-        <h3 className="mt-4 font-display text-3xl text-navy">Enquiry Received</h3>
-        <p className="mt-2 text-xs uppercase tracking-widest text-gold font-medium">
-          Reference Code: <span className="font-mono text-navy font-semibold">{submissionResult.referenceId}</span>
-        </p>
-        <p className="mx-auto mt-4 max-w-md text-[15px] text-muted-foreground leading-relaxed">
-          Thank you! A member of our dedicated travel team will review your requirements and get back to you shortly with a personalized itinerary and quotes.
+      <div className="border border-gold/40 bg-secondary p-8 sm:p-10 text-center" role="status">
+        <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold bg-navy rounded-full mb-3">
+          Ref: {lastSubmission.reference}
+        </span>
+        <h3 className="font-display text-3xl text-navy">Thank You!</h3>
+        <p className="mx-auto mt-4 max-w-md text-[15px] text-muted-foreground">
+          Your enquiry details are ready. Reach our team instantly on WhatsApp or send directly via Email:
         </p>
 
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          {submissionResult.whatsappUrl ? (
-            <a
-              href={submissionResult.whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
-            >
-              💬 Instant Connect on WhatsApp
-            </a>
-          ) : null}
-          <PillButton onClick={() => setSubmissionResult(null)} variant="outline">
-            Send another enquiry
-          </PillButton>
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a
+            href={lastSubmission.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 hover:bg-emerald-700 px-6 py-3 text-sm font-medium text-white shadow-lg transition-transform hover:scale-105"
+          >
+            Chat on WhatsApp
+          </a>
+          <a
+            href={lastSubmission.mailUrl}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-navy/30 bg-white hover:bg-slate-50 px-6 py-3 text-sm font-medium text-navy transition-transform hover:scale-105"
+          >
+            Send via Email
+          </a>
         </div>
+
+        <button
+          onClick={() => setSent(false)}
+          className="mt-8 text-xs text-navy/70 hover:text-navy underline block mx-auto"
+        >
+          Send another enquiry
+        </button>
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
-      {/* Honeypot field for bot protection */}
-      <input type="text" {...register("hp")} className="hidden" tabIndex={-1} autoComplete="off" />
-
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label className={labelCls} htmlFor="name">
-            Name *
+            Name
           </label>
-          <input id="name" className={`${field} mt-2`} {...register("name")} aria-invalid={!!errors.name} placeholder="Your full name" />
+          <input
+            id="name"
+            className={`${field} mt-2`}
+            {...register("name")}
+            aria-invalid={!!errors.name}
+            placeholder="Your full name"
+          />
           {errors.name ? <p className="mt-2 text-xs text-destructive">{errors.name.message}</p> : null}
         </div>
         <div>
           <label className={labelCls} htmlFor="phone">
-            Phone *
+            Phone
           </label>
-          <input id="phone" type="tel" className={`${field} mt-2`} {...register("phone")} aria-invalid={!!errors.phone} placeholder="+91 XXXXX XXXXX" />
+          <input
+            id="phone"
+            type="tel"
+            className={`${field} mt-2`}
+            {...register("phone")}
+            aria-invalid={!!errors.phone}
+            placeholder="+91 98765 43210"
+          />
           {errors.phone ? <p className="mt-2 text-xs text-destructive">{errors.phone.message}</p> : null}
         </div>
       </div>
 
       <div>
         <label className={labelCls} htmlFor="email">
-          Email *
+          Email
         </label>
-        <input id="email" type="email" className={`${field} mt-2`} {...register("email")} aria-invalid={!!errors.email} placeholder="yourname@example.com" />
+        <input
+          id="email"
+          type="email"
+          className={`${field} mt-2`}
+          {...register("email")}
+          aria-invalid={!!errors.email}
+          placeholder="your.email@example.com"
+        />
         {errors.email ? <p className="mt-2 text-xs text-destructive">{errors.email.message}</p> : null}
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label className={labelCls} htmlFor="travelType">
-            Travel type *
+            Travel type
           </label>
-          <select id="travelType" className={`${field} mt-2`} {...register("travelType")} aria-invalid={!!errors.travelType}>
-            <option value="">Select Service</option>
-            <option>Hajj</option>
-            <option>Umrah</option>
-            <option>Domestic tour</option>
-            <option>International tour</option>
-            <option>Tourist visa</option>
-            <option>Air ticketing</option>
-            <option>B2B ticketing</option>
+          <select
+            id="travelType"
+            className={`${field} mt-2`}
+            {...register("travelType")}
+            aria-invalid={!!errors.travelType}
+          >
+            <option value="">Select travel service</option>
+            <option value="Hajj">Hajj Package</option>
+            <option value="Umrah">Umrah Package</option>
+            <option value="Domestic tour">Domestic Tour</option>
+            <option value="International tour">International Tour</option>
+            <option value="Tourist visa">Tourist Visa</option>
+            <option value="Air ticketing">Air Ticketing</option>
+            <option value="B2B ticketing">B2B Air Ticketing</option>
           </select>
           {errors.travelType ? (
             <p className="mt-2 text-xs text-destructive">{errors.travelType.message}</p>
@@ -156,7 +174,9 @@ export function ContactForm() {
           <select id="destination" className={`${field} mt-2`} {...register("destination")}>
             <option value="">Not decided yet</option>
             {destinations.map((d) => (
-              <option key={d.slug}>{d.name}</option>
+              <option key={d.slug} value={d.name}>
+                {d.name}
+              </option>
             ))}
           </select>
         </div>
@@ -165,7 +185,7 @@ export function ContactForm() {
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label className={labelCls} htmlFor="travelDate">
-            Preferred Travel date
+            Preferred Travel Date
           </label>
           <input id="travelDate" type="date" className={`${field} mt-2`} {...register("travelDate")} />
         </div>
@@ -173,25 +193,32 @@ export function ContactForm() {
           <label className={labelCls} htmlFor="travellers">
             Number of Travellers
           </label>
-          <input id="travellers" type="number" min={1} className={`${field} mt-2`} {...register("travellers")} placeholder="1" />
+          <input
+            id="travellers"
+            type="number"
+            min={1}
+            defaultValue={1}
+            className={`${field} mt-2`}
+            {...register("travellers")}
+          />
         </div>
       </div>
 
       <div>
         <label className={labelCls} htmlFor="message">
-          Additional Requirements / Message
+          Your Requirements / Notes
         </label>
-        <textarea id="message" rows={4} className={`${field} mt-2 resize-none`} {...register("message")} placeholder="Tell us any specific preferences (hotel category, dates, special requests)..." />
+        <textarea
+          id="message"
+          rows={4}
+          className={`${field} mt-2 resize-none`}
+          placeholder="Tell us about any specific preferences, hotel categories or dates..."
+          {...register("message")}
+        />
       </div>
 
-      {failed ? (
-        <p className="text-sm text-destructive" role="alert">
-          {errorMessage || "Something went wrong. Please try again or reach us on WhatsApp."}
-        </p>
-      ) : null}
-
       <PillButton type="submit" size="lg" disabled={isSubmitting} withArrow>
-        {isSubmitting ? "Registering Enquiry…" : "Send Enquiry"}
+        {isSubmitting ? "Processing…" : "Submit Enquiry"}
       </PillButton>
     </form>
   );
