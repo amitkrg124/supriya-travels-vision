@@ -19,12 +19,18 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
+const FORMSPREE_ENDPOINT = import.meta.env["VITE_FORMSPREE_ENDPOINT"] as string | undefined;
+
+const FALLBACK_ERROR = "We couldn't submit your enquiry just now.";
+const CONTACT_US_DIRECTLY = "Please reach us on WhatsApp or email instead.";
+
 const field =
   "w-full border border-input bg-background px-4 py-3 text-[15px] text-navy outline-none transition-colors duration-300 focus:border-gold";
 const labelCls = "block text-[12px] font-medium uppercase tracking-[0.12em] text-muted-foreground";
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [lastSubmission, setLastSubmission] = useState<{
     reference: string;
     whatsappUrl: string;
@@ -47,11 +53,52 @@ export function ContactForm() {
 
     const text = `*New Travel Enquiry - Supriya Travels*\nRef: ${reference}\nName: ${values.name}\nPhone: ${values.phone}\nEmail: ${values.email}\nTravel Type: ${values.travelType}\nDestination: ${values.destination || "Not decided"}\nTravel Date: ${values.travelDate || "Flexible"}\nTravellers: ${values.travellers || "1"}\nMessage: ${values.message || "N/A"}`;
 
-    const cleanPhone = company.phone.primary.replace(/[^0-9]/g, "");
+    const cleanPhone = (company.phone.split(",")[0] ?? "").replace(/[^0-9]/g, "");
     const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(text)}`;
     const mailUrl = `mailto:supriyatravelsindia@gmail.com?subject=${encodeURIComponent(
       `New Enquiry [${reference}] - ${values.name} (${values.travelType})`
     )}&body=${encodeURIComponent(text)}`;
+
+    setSubmitError(null);
+
+    if (FORMSPREE_ENDPOINT) {
+      try {
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            reference,
+            name: values.name,
+            phone: values.phone,
+            email: values.email,
+            travelType: values.travelType,
+            destination: values.destination || "Not decided",
+            travelDate: values.travelDate || "Flexible",
+            travellers: values.travellers || "1",
+            message: values.message || "N/A",
+            _subject: `New Enquiry [${reference}] - ${values.name} (${values.travelType})`,
+          }),
+        });
+
+        if (!response.ok) {
+          const data = (await response.json().catch(() => null)) as {
+            errors?: { message?: string }[];
+          } | null;
+          // Formspree returns human-readable validation messages; anything else is
+          // not worth showing a traveller verbatim.
+          const reason = data?.errors
+            ?.map((e) => e.message)
+            .filter(Boolean)
+            .join(", ");
+          setSubmitError(`${reason || FALLBACK_ERROR} ${CONTACT_US_DIRECTLY}`);
+          return;
+        }
+      } catch {
+        // Network/CORS failure — the thrown message ("Failed to fetch") is jargon.
+        setSubmitError(`${FALLBACK_ERROR} ${CONTACT_US_DIRECTLY}`);
+        return;
+      }
+    }
 
     setLastSubmission({ reference, whatsappUrl, mailUrl });
     setSent(true);
@@ -66,7 +113,9 @@ export function ContactForm() {
         </span>
         <h3 className="font-display text-3xl text-navy">Thank You!</h3>
         <p className="mx-auto mt-4 max-w-md text-[15px] text-muted-foreground">
-          Your enquiry details are ready. Reach our team instantly on WhatsApp or send directly via Email:
+          {FORMSPREE_ENDPOINT
+            ? "Your enquiry has reached our team. For a faster response, ping us on WhatsApp or email using the details below:"
+            : "Your enquiry details are ready. Reach our team instantly on WhatsApp or send directly via Email:"}
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -217,8 +266,14 @@ export function ContactForm() {
         />
       </div>
 
+      {submitError ? (
+        <p className="text-sm text-destructive" role="alert">
+          {submitError}
+        </p>
+      ) : null}
+
       <PillButton type="submit" size="lg" disabled={isSubmitting} withArrow>
-        {isSubmitting ? "Processing…" : "Submit Enquiry"}
+        {isSubmitting ? "Sending…" : "Submit Enquiry"}
       </PillButton>
     </form>
   );
