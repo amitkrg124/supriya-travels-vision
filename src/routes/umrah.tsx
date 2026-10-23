@@ -11,9 +11,10 @@ import { createMetadata, createCanonicalLink } from "@/lib/seo";
 export const Route = createFileRoute("/umrah")({
   head: () => ({
     meta: createMetadata({
-      title: "Umrah Packages from Delhi | Supriya Travels of India",
+      title: "Umrah Packages from Delhi | Makka Madina Tours | Supriya Travels",
       description:
-        "Umrah packages across economy, semi deluxe and super deluxe categories, with flights, visa, accommodation and transfers arranged.",
+        "Affordable Umrah packages from Delhi in economy, semi deluxe and super deluxe options, with flights, Umrah visa, Makkah and Madinah hotels and transfers.",
+      keywords: ["Umrah packages from Delhi", "Umrah packages from India", "Umrah travel agency in Delhi", "best Umrah travel company in India", "Makka Madina tour package", "Makkah Madinah Umrah", "Umrah visa", "cheap Umrah package"],
     }),
     links: createCanonicalLink("/umrah"),
   }),

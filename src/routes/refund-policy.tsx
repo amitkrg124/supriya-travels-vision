@@ -1,16 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { createCanonicalLink, createMetadata } from "@/lib/seo";
 import { PolicyPage } from "@/components/ui-editorial/PolicyPage";
 
 export const Route = createFileRoute("/refund-policy")({
   head: () => ({
-    meta: [
-      { title: "Refund Policy — Supriya Travels of India" },
-      { name: "description", content: "How cancellations and refunds are handled for tickets, packages and visa services." },
-      { property: "og:title", content: "Refund Policy — Supriya Travels of India" },
-      { property: "og:description", content: "How cancellations and refunds are handled." },
-      { property: "og:url", content: "/refund-policy" },
-    ],
-    links: [{ rel: "canonical", href: "/refund-policy" }],
+    meta: createMetadata({
+      title: "Refund & Cancellation Policy | Supriya Travels of India",
+      description:
+        "How cancellations and refunds are handled at Supriya Travels of India for air tickets, Hajj and Umrah packages, tour packages, hotels and visa services.",
+    }),
+    links: createCanonicalLink("/refund-policy"),
   }),
   component: () => (
     <PolicyPage title="Refund Policy">

@@ -22,12 +22,23 @@ export const Route = createFileRoute("/destinations/$slug")({
       return { meta: [{ title: "Destination not found" }, { name: "robots", content: "noindex" }] };
     }
     const d = loaderData.destination;
+    const kind = d.region === "domestic" ? "tour" : "holiday";
     const title = `${d.name} Tour Packages from Delhi | Supriya Travels`;
+    const description = `${d.name} ${kind} packages from Delhi with hotels, transfers and sightseeing. Honeymoon, couple and family trips planned by Supriya Travels of India.`;
     return {
       meta: createMetadata({
         title,
-        description: d.description,
-        type: "article"
+        description,
+        type: "article",
+        keywords: [
+          `${d.name} tour package`,
+          `${d.name} tour package from Delhi`,
+          `${d.name} honeymoon package`,
+          `${d.name} trip for couples`,
+          `${d.name} family holiday`,
+          d.region === "domestic" ? "domestic tour packages" : "international tour packages",
+          "Supriya Travels of India",
+        ],
       }),
       links: createCanonicalLink(`/destinations/${params.slug}`),
       scripts: [

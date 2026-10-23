@@ -1,23 +1,24 @@
 import fs from 'fs';
 import path from 'path';
 
-const BASE_URL = 'https://supriyatravelsindia.com';
+const BASE_URL = 'https://www.supriyatravelsindia.com';
 
+// [path, changefreq, priority]
 const staticRoutes = [
-  '/',
-  '/about-us',
-  '/packages',
-  '/our-services',
-  '/destinations',
-  '/contact',
-  '/hajj',
-  '/umrah',
-  '/services/air-ticketing',
-  '/services/b2b-air-ticketing',
-  '/services/tourist-visas',
-  '/privacy-policy',
-  '/refund-policy',
-  '/terms',
+  ['/', 'weekly', '1.0'],
+  ['/hajj', 'weekly', '0.9'],
+  ['/umrah', 'weekly', '0.9'],
+  ['/packages', 'weekly', '0.9'],
+  ['/destinations', 'weekly', '0.8'],
+  ['/our-services', 'monthly', '0.8'],
+  ['/services/tourist-visas', 'monthly', '0.7'],
+  ['/services/air-ticketing', 'monthly', '0.7'],
+  ['/services/b2b-air-ticketing', 'monthly', '0.6'],
+  ['/about-us', 'monthly', '0.6'],
+  ['/contact', 'monthly', '0.7'],
+  ['/privacy-policy', 'yearly', '0.3'],
+  ['/refund-policy', 'yearly', '0.3'],
+  ['/terms', 'yearly', '0.3'],
 ];
 
 // Read destinations from destinations.ts
@@ -41,17 +42,19 @@ function generateSitemap() {
   const destinationSlugs = extractDestinations();
   const allRoutes = [
     ...staticRoutes,
-    ...destinationSlugs.map((slug) => `/destinations/${slug}`),
+    ...destinationSlugs.map((slug) => [`/destinations/${slug}`, 'monthly', '0.7']),
   ];
+  const lastmod = new Date().toISOString().slice(0, 10);
 
   const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allRoutes
   .map(
-    (route) => `  <url>
+    ([route, changefreq, priority]) => `  <url>
     <loc>${BASE_URL}${route === '/' ? '' : route}</loc>
-    <changefreq>${route === '/' ? 'weekly' : 'monthly'}</changefreq>
-    <priority>${route === '/' ? '1.0' : route.startsWith('/destinations/') ? '0.7' : '0.8'}</priority>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
   </url>`
   )
   .join('\n')}

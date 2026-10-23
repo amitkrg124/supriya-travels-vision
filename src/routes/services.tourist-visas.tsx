@@ -6,9 +6,10 @@ import { createMetadata, createCanonicalLink } from "@/lib/seo";
 export const Route = createFileRoute("/services/tourist-visas")({
   head: () => ({
     meta: createMetadata({
-      title: "Worldwide Tourist Visa Assistance | Supriya Travels of India",
+      title: "Tourist Visa Services in Delhi | Dubai, Schengen & More",
       description:
-        "Tourist visa documentation, appointment scheduling and application support for destinations worldwide.",
+        "Tourist visa assistance from Delhi for Dubai, Thailand, Singapore, Schengen and worldwide destinations: document checklist, application and appointment help.",
+      keywords: ["tourist visa services Delhi", "visa agent in Delhi", "Dubai tourist visa", "Schengen visa assistance", "Umrah visa", "worldwide tourist visa"],
     }),
     links: createCanonicalLink("/services/tourist-visas"),
   }),

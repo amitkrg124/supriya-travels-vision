@@ -1,16 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { createCanonicalLink, createMetadata } from "@/lib/seo";
 import { PolicyPage } from "@/components/ui-editorial/PolicyPage";
 
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
-    meta: [
-      { title: "Privacy Policy — Supriya Travels of India" },
-      { name: "description", content: "How Supriya Travels of India collects, uses and protects the information you share with us." },
-      { property: "og:title", content: "Privacy Policy — Supriya Travels of India" },
-      { property: "og:description", content: "How we handle the information you share with us." },
-      { property: "og:url", content: "/privacy-policy" },
-    ],
-    links: [{ rel: "canonical", href: "/privacy-policy" }],
+    meta: createMetadata({
+      title: "Privacy Policy | Supriya Travels of India",
+      description:
+        "How Supriya Travels of India collects, uses and protects the personal information and travel documents you share with us for bookings and visas.",
+    }),
+    links: createCanonicalLink("/privacy-policy"),
   }),
   component: () => (
     <PolicyPage title="Privacy Policy">

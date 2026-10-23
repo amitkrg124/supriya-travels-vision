@@ -6,9 +6,10 @@ import { createMetadata, createCanonicalLink } from "@/lib/seo";
 export const Route = createFileRoute("/services/b2b-air-ticketing")({
   head: () => ({
     meta: createMetadata({
-      title: "B2B Air Ticketing Services | Supriya Travels of India",
+      title: "B2B Air Ticketing for Travel Agents | Supriya Travels of India",
       description:
-        "Ticketing support for travel agents and trade partners, with direct coordination on bookings and issuance.",
+        "B2B air ticketing desk for travel agents and trade partners in India: fast issuance, holds, reissues, refunds and group fares with direct coordination.",
+      keywords: ["B2B air ticketing", "air ticketing for travel agents", "B2B travel agency Delhi", "group fares for agents", "airline ticket consolidator India"],
     }),
     links: createCanonicalLink("/services/b2b-air-ticketing"),
   }),

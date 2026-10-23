@@ -10,9 +10,10 @@ import { createMetadata, createCanonicalLink } from "@/lib/seo";
 export const Route = createFileRoute("/destinations/")({
   head: () => ({
     meta: createMetadata({
-      title: "Destinations | Supriya Travels of India",
+      title: "Domestic & International Tour Destinations | Supriya Travels",
       description:
-        "Explore international destinations including Dubai, Bali and the Maldives, and Indian destinations including Kashmir, Kerala and Rajasthan.",
+        "Explore tour packages from Delhi to Kashmir, Kerala, Himachal, Rajasthan and the North East, plus Dubai, Bali, Maldives, Thailand, Singapore and more.",
+      keywords: ["domestic tour destinations", "international tour destinations", "Kashmir tour package", "Kerala tour package", "Dubai tour package", "Bali honeymoon package", "Maldives honeymoon package", "Thailand tour package from Delhi"],
     }),
     links: createCanonicalLink("/destinations"),
   }),

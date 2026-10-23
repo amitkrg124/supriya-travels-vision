@@ -11,9 +11,10 @@ import { createMetadata, createCanonicalLink } from "@/lib/seo";
 export const Route = createFileRoute("/hajj")({
   head: () => ({
     meta: createMetadata({
-      title: "Hajj Packages from Delhi | Supriya Travels of India",
+      title: "Hajj Packages from Delhi | Makkah & Madinah | Supriya Travels",
       description:
-        "Hajj travel arranged end to end: flights, visa processing, accommodation, transport and on-ground support.",
+        "Hajj packages from Delhi with flights, Hajj visa processing, Makkah and Madinah hotels, transport and on-ground support by Supriya Travels of India.",
+      keywords: ["Hajj packages from Delhi", "Hajj packages from India", "Hajj travel agency in Delhi", "best Hajj tour operator in India", "Makkah Madinah Hajj package", "Makka Madina tour", "Hajj visa", "Huz travel", "Haj tour packages"],
     }),
     links: createCanonicalLink("/hajj"),
   }),

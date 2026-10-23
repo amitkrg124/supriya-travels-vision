@@ -1,16 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { createCanonicalLink, createMetadata } from "@/lib/seo";
 import { PolicyPage } from "@/components/ui-editorial/PolicyPage";
 
 export const Route = createFileRoute("/terms")({
   head: () => ({
-    meta: [
-      { title: "Terms & Conditions — Supriya Travels of India" },
-      { name: "description", content: "Terms governing bookings, quotations and travel services arranged by Supriya Travels of India." },
-      { property: "og:title", content: "Terms & Conditions — Supriya Travels of India" },
-      { property: "og:description", content: "Terms governing bookings and travel services." },
-      { property: "og:url", content: "/terms" },
-    ],
-    links: [{ rel: "canonical", href: "/terms" }],
+    meta: createMetadata({
+      title: "Terms & Conditions | Supriya Travels of India",
+      description:
+        "Terms governing quotations, bookings, payments, documents and travel services arranged by Supriya Travels of India, New Delhi.",
+    }),
+    links: createCanonicalLink("/terms"),
   }),
   component: () => (
     <PolicyPage title="Terms & Conditions">

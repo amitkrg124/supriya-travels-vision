@@ -21,9 +21,10 @@ export const Route = createFileRoute("/packages")({
   },
   head: () => ({
     meta: createMetadata({
-      title: "Travel Packages | Hajj, Umrah, Domestic & International Tours",
+      title: "Tour Packages from Delhi | Honeymoon, Domestic & International",
       description:
-        "Browse Hajj, Umrah, domestic and international travel packages arranged by Supriya Travels of India.",
+        "Browse Hajj, Umrah, domestic and international tour packages from Delhi, including honeymoon and couple packages, short weekend trips, hotel stays and camping.",
+      keywords: ["tour packages from Delhi", "honeymoon packages", "couple tour packages", "short trips from Delhi", "weekend getaways", "domestic tour packages", "international tour packages", "Hajj Umrah packages", "camping packages", "hotel stays"],
     }),
     links: createCanonicalLink("/packages"),
   }),
