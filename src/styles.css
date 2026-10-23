@@ -194,8 +194,8 @@
 }
 
 @utility logo-on-dark {
-  filter: brightness(0) saturate(100%) invert(74%) sepia(28%) saturate(720%)
-    hue-rotate(2deg) brightness(92%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(74%) sepia(28%) saturate(720%) hue-rotate(2deg)
+    brightness(92%) contrast(88%);
 }
 
 @utility reveal-clip {

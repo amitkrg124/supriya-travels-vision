@@ -50,7 +50,7 @@ export function ContactForm() {
     const cleanPhone = company.phone.primary.replace(/[^0-9]/g, "");
     const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(text)}`;
     const mailUrl = `mailto:supriyatravelsindia@gmail.com?subject=${encodeURIComponent(
-      `New Enquiry [${reference}] - ${values.name} (${values.travelType})`
+      `New Enquiry [${reference}] - ${values.name} (${values.travelType})`,
     )}&body=${encodeURIComponent(text)}`;
 
     setLastSubmission({ reference, whatsappUrl, mailUrl });
@@ -66,7 +66,8 @@ export function ContactForm() {
         </span>
         <h3 className="font-display text-3xl text-navy">Thank You!</h3>
         <p className="mx-auto mt-4 max-w-md text-[15px] text-muted-foreground">
-          Your enquiry details are ready. Reach our team instantly on WhatsApp or send directly via Email:
+          Your enquiry details are ready. Reach our team instantly on WhatsApp or send directly via
+          Email:
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -110,7 +111,9 @@ export function ContactForm() {
             aria-invalid={!!errors.name}
             placeholder="Your full name"
           />
-          {errors.name ? <p className="mt-2 text-xs text-destructive">{errors.name.message}</p> : null}
+          {errors.name ? (
+            <p className="mt-2 text-xs text-destructive">{errors.name.message}</p>
+          ) : null}
         </div>
         <div>
           <label className={labelCls} htmlFor="phone">
@@ -124,7 +127,9 @@ export function ContactForm() {
             aria-invalid={!!errors.phone}
             placeholder="+91 98765 43210"
           />
-          {errors.phone ? <p className="mt-2 text-xs text-destructive">{errors.phone.message}</p> : null}
+          {errors.phone ? (
+            <p className="mt-2 text-xs text-destructive">{errors.phone.message}</p>
+          ) : null}
         </div>
       </div>
 
@@ -140,7 +145,9 @@ export function ContactForm() {
           aria-invalid={!!errors.email}
           placeholder="your.email@example.com"
         />
-        {errors.email ? <p className="mt-2 text-xs text-destructive">{errors.email.message}</p> : null}
+        {errors.email ? (
+          <p className="mt-2 text-xs text-destructive">{errors.email.message}</p>
+        ) : null}
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2">
@@ -187,7 +194,12 @@ export function ContactForm() {
           <label className={labelCls} htmlFor="travelDate">
             Preferred Travel Date
           </label>
-          <input id="travelDate" type="date" className={`${field} mt-2`} {...register("travelDate")} />
+          <input
+            id="travelDate"
+            type="date"
+            className={`${field} mt-2`}
+            {...register("travelDate")}
+          />
         </div>
         <div>
           <label className={labelCls} htmlFor="travellers">

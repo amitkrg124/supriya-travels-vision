@@ -32,9 +32,7 @@ export function PackageCard({ pkg }: { pkg: TravelPackage }) {
         <div className="flex items-center justify-between gap-3">
           <span className="eyebrow text-gold">{typeLabel[pkg.type]}</span>
           {pkg.duration ? (
-            <span className="text-xs text-muted-foreground">
-              {pkg.duration} nights
-            </span>
+            <span className="text-xs text-muted-foreground">{pkg.duration} nights</span>
           ) : null}
         </div>
 
@@ -52,15 +50,14 @@ export function PackageCard({ pkg }: { pkg: TravelPackage }) {
 
         <div className="mt-auto flex items-end justify-between gap-4 pt-8">
           <div>
-            <p className="text-[11px] uppercase tracking-[0.12em] text-muted-foreground">Starting from</p>
+            <p className="text-[11px] uppercase tracking-[0.12em] text-muted-foreground">
+              Starting from
+            </p>
             <p className="font-display text-xl text-navy">
               {pkg.price === null ? "On request" : `₹${pkg.price.toLocaleString("en-IN")}`}
             </p>
           </div>
-          <Link
-            to="/contact"
-            className="link-gold text-sm font-medium text-navy"
-          >
+          <Link to="/contact" className="link-gold text-sm font-medium text-navy">
             Enquire →
           </Link>
         </div>

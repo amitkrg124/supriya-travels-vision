@@ -5,7 +5,11 @@ export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy — Supriya Travels of India" },
-      { name: "description", content: "How Supriya Travels of India collects, uses and protects the information you share with us." },
+      {
+        name: "description",
+        content:
+          "How Supriya Travels of India collects, uses and protects the information you share with us.",
+      },
       { property: "og:title", content: "Privacy Policy — Supriya Travels of India" },
       { property: "og:description", content: "How we handle the information you share with us." },
       { property: "og:url", content: "/privacy-policy" },
@@ -20,9 +24,8 @@ export const Route = createFileRoute("/privacy-policy")({
       </p>
       <h2 className="font-display text-2xl text-navy">Information we collect</h2>
       <p>
-        We collect the details you provide in an enquiry — name, phone number, email address,
-        travel dates and preferences — along with any documents you share for visa or ticketing
-        purposes.
+        We collect the details you provide in an enquiry — name, phone number, email address, travel
+        dates and preferences — along with any documents you share for visa or ticketing purposes.
       </p>
       <h2 className="font-display text-2xl text-navy">How it is used</h2>
       <p>
@@ -33,8 +36,8 @@ export const Route = createFileRoute("/privacy-policy")({
       <h2 className="font-display text-2xl text-navy">Retention and access</h2>
       <p>
         We retain enquiry and booking records for as long as needed for service and statutory
-        purposes. You may contact us at any time to request access to, correction of, or deletion
-        of your details.
+        purposes. You may contact us at any time to request access to, correction of, or deletion of
+        your details.
       </p>
       <h2 className="font-display text-2xl text-navy">Contact</h2>
       <p>For any question about this policy, please reach us through the contact page.</p>

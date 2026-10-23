@@ -27,7 +27,7 @@ export const Route = createFileRoute("/destinations/$slug")({
       meta: createMetadata({
         title,
         description: d.description,
-        type: "article"
+        type: "article",
       }),
       links: createCanonicalLink(`/destinations/${params.slug}`),
       scripts: [
@@ -51,7 +51,9 @@ export const Route = createFileRoute("/destinations/$slug")({
 function DestinationPage() {
   const { destination: d } = Route.useLoaderData();
   const pkgs = packagesByDestination(d.slug);
-  const related = destinations.filter((x) => x.slug !== d.slug && x.region === d.region).slice(0, 3);
+  const related = destinations
+    .filter((x) => x.slug !== d.slug && x.region === d.region)
+    .slice(0, 3);
 
   return (
     <>
@@ -62,7 +64,11 @@ function DestinationPage() {
         intro={d.tagline}
         image={d.heroImage}
         imageAlt={`${d.name}, ${d.country}`}
-        crumbs={[{ label: "Home", to: "/" }, { label: "Destinations", to: "/destinations" }, { label: d.name }]}
+        crumbs={[
+          { label: "Home", to: "/" },
+          { label: "Destinations", to: "/destinations" },
+          { label: d.name },
+        ]}
       >
         <PillLink to="/contact" variant="gold">
           Plan My {d.name} Journey
@@ -74,7 +80,9 @@ function DestinationPage() {
           <div>
             <SectionHeading eyebrow="Introduction" title={d.description} />
             <Reveal delay={0.1}>
-              <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground">{d.intro}</p>
+              <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground">
+                {d.intro}
+              </p>
             </Reveal>
           </div>
           <Reveal delay={0.1}>
@@ -112,7 +120,9 @@ function DestinationPage() {
             {d.attractions.map((a, i) => (
               <Reveal key={a.name} delay={(i % 2) * 0.05} className="border-t border-border pt-6">
                 <h3 className="font-display text-2xl text-navy">{a.name}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{a.description}</p>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+                  {a.description}
+                </p>
               </Reveal>
             ))}
           </div>
@@ -124,7 +134,12 @@ function DestinationPage() {
           <SectionHeading eyebrow="Gallery" title={`${d.name} in view.`} />
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             {d.gallery.map((src, i) => (
-              <ImageReveal key={i} src={src} alt={`${d.name} photography`} className="aspect-[4/3]" />
+              <ImageReveal
+                key={i}
+                src={src}
+                alt={`${d.name} photography`}
+                className="aspect-[4/3]"
+              />
             ))}
             <ImageReveal src={d.heroImage} alt={`${d.name} landscape`} className="aspect-[4/3]" />
           </div>

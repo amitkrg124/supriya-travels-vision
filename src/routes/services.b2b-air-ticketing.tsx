@@ -22,9 +22,18 @@ export const Route = createFileRoute("/services/b2b-air-ticketing")({
       crumbLabel="B2B Air Ticketing"
       body="Agents need speed and a straight answer. Our trade desk handles issuance, changes and escalations without going through a queue."
       items={[
-        { title: "Agent support", text: "A direct point of contact for bookings, holds and clarifications." },
-        { title: "Fast issuance", text: "Prompt ticketing within fare deadlines and hold windows." },
-        { title: "Change handling", text: "Reissues, cancellations and refund follow-ups managed on your behalf." },
+        {
+          title: "Agent support",
+          text: "A direct point of contact for bookings, holds and clarifications.",
+        },
+        {
+          title: "Fast issuance",
+          text: "Prompt ticketing within fare deadlines and hold windows.",
+        },
+        {
+          title: "Change handling",
+          text: "Reissues, cancellations and refund follow-ups managed on your behalf.",
+        },
       ]}
     />
   ),

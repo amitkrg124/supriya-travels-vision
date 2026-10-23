@@ -23,7 +23,10 @@ export const Route = createFileRoute("/hajj")({
 const inclusions = [
   { title: "Flights", text: "Return air travel arranged for the confirmed group departure." },
   { title: "Visa assistance", text: "Documentation guidance and application processing support." },
-  { title: "Accommodation", text: "Hotel category confirmed at booking, in line with the selected package." },
+  {
+    title: "Accommodation",
+    text: "Hotel category confirmed at booking, in line with the selected package.",
+  },
   { title: "Transportation", text: "Ground transport between airports and the holy sites." },
   { title: "Meals", text: "Meal plan as per the selected package category." },
   { title: "Support", text: "Coordination and assistance through the duration of the journey." },
@@ -66,16 +69,25 @@ function HajjPage() {
           <SectionHeading eyebrow="What Is Arranged" title="Handled on your behalf." />
           <div className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-3">
             {inclusions.map((item, i) => (
-              <Reveal key={item.title} delay={(i % 3) * 0.05} className="border-t border-border pt-6">
+              <Reveal
+                key={item.title}
+                delay={(i % 3) * 0.05}
+                className="border-t border-border pt-6"
+              >
                 <h3 className="font-display text-2xl text-navy">{item.title}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{item.text}</p>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+                  {item.text}
+                </p>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <CTASection title="Planning your Hajj journey?" text="Send us your details and we will guide you through the requirements." />
+      <CTASection
+        title="Planning your Hajj journey?"
+        text="Send us your details and we will guide you through the requirements."
+      />
     </>
   );
 }

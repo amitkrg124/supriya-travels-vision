@@ -19,7 +19,7 @@ export function Logo({ className, height }: { className?: string; height?: numbe
           style={height ? { height } : undefined}
           className={cn(
             "h-11 sm:h-14 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300",
-            className
+            className,
           )}
           width={1400}
           height={1000}

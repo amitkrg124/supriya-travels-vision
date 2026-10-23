@@ -26,7 +26,10 @@ function Column({ title, links }: { title: string; links: { label: string; to: s
       <ul className="mt-5 space-y-3">
         {links.map((l) => (
           <li key={l.to + l.label}>
-            <Link to={l.to} className="link-gold text-sm text-white/70 transition-colors hover:text-white">
+            <Link
+              to={l.to}
+              className="link-gold text-sm text-white/70 transition-colors hover:text-white"
+            >
               {l.label}
             </Link>
           </li>
@@ -62,7 +65,12 @@ export function Footer() {
                   <li className="flex items-start gap-3">
                     <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                     {company.googleLocation ? (
-                      <a href={company.googleLocation} target="_blank" rel="noreferrer" className="hover:text-gold transition-colors leading-relaxed">
+                      <a
+                        href={company.googleLocation}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-gold transition-colors leading-relaxed"
+                      >
                         {company.address}
                       </a>
                     ) : (
@@ -72,7 +80,7 @@ export function Footer() {
                 ) : null}
               </ul>
             ) : null}
-            
+
             {company.socials && company.socials.length > 0 ? (
               <div className="mt-8 flex flex-wrap gap-4">
                 {company.socials.map((social) => {
@@ -100,7 +108,10 @@ export function Footer() {
             ) : null}
           </div>
 
-          <Column title="Quick Links" links={navigation.map((n) => ({ label: n.label, to: n.to }))} />
+          <Column
+            title="Quick Links"
+            links={navigation.map((n) => ({ label: n.label, to: n.to }))}
+          />
           <Column title="Popular Destinations" links={popular} />
           <Column title="Services" links={serviceLinks} />
         </div>

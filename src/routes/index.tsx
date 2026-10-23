@@ -28,17 +28,45 @@ export const Route = createFileRoute("/")({
 });
 
 const process = [
-  { step: "01", title: "Tell us your plan", text: "Share your dates, destination and who you're travelling with." },
-  { step: "02", title: "We build the itinerary", text: "Flights, stays, transfers and visa steps, laid out clearly." },
-  { step: "03", title: "Confirm with clarity", text: "You approve the details before anything is booked." },
-  { step: "04", title: "Travel supported", text: "We stay reachable from departure through to return." },
+  {
+    step: "01",
+    title: "Tell us your plan",
+    text: "Share your dates, destination and who you're travelling with.",
+  },
+  {
+    step: "02",
+    title: "We build the itinerary",
+    text: "Flights, stays, transfers and visa steps, laid out clearly.",
+  },
+  {
+    step: "03",
+    title: "Confirm with clarity",
+    text: "You approve the details before anything is booked.",
+  },
+  {
+    step: "04",
+    title: "Travel supported",
+    text: "We stay reachable from departure through to return.",
+  },
 ];
 
 const reasons = [
-  { title: "Sacred journeys handled properly", text: "Hajj and Umrah travel arranged with the documentation, coordination and care the journey deserves." },
-  { title: "One team for the whole trip", text: "Visa, ticketing, hotels and transfers arranged together rather than across separate agencies." },
-  { title: "Plans built around you", text: "Itineraries shaped by your dates, pace and budget instead of a fixed template." },
-  { title: "Reachable people", text: "Direct contact with the team handling your booking, before and during travel." },
+  {
+    title: "Sacred journeys handled properly",
+    text: "Hajj and Umrah travel arranged with the documentation, coordination and care the journey deserves.",
+  },
+  {
+    title: "One team for the whole trip",
+    text: "Visa, ticketing, hotels and transfers arranged together rather than across separate agencies.",
+  },
+  {
+    title: "Plans built around you",
+    text: "Itineraries shaped by your dates, pace and budget instead of a fixed template.",
+  },
+  {
+    title: "Reachable people",
+    text: "Direct contact with the team handling your booking, before and during travel.",
+  },
 ];
 
 function Home() {
@@ -78,7 +106,9 @@ function Home() {
               <dl className="mt-14 grid grid-cols-2 gap-8 border-t border-border pt-10">
                 {company.metrics.map((m) => (
                   <div key={m.label}>
-                    <dt className="text-[11px] uppercase tracking-[0.12em] text-muted-foreground">{m.label}</dt>
+                    <dt className="text-[11px] uppercase tracking-[0.12em] text-muted-foreground">
+                      {m.label}
+                    </dt>
                     <dd className="font-display mt-1 text-3xl text-navy">{m.value}</dd>
                   </div>
                 ))}

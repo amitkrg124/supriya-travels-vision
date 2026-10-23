@@ -5,7 +5,11 @@ export const Route = createFileRoute("/refund-policy")({
   head: () => ({
     meta: [
       { title: "Refund Policy — Supriya Travels of India" },
-      { name: "description", content: "How cancellations and refunds are handled for tickets, packages and visa services." },
+      {
+        name: "description",
+        content:
+          "How cancellations and refunds are handled for tickets, packages and visa services.",
+      },
       { property: "og:title", content: "Refund Policy — Supriya Travels of India" },
       { property: "og:description", content: "How cancellations and refunds are handled." },
       { property: "og:url", content: "/refund-policy" },

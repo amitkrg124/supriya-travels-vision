@@ -49,7 +49,12 @@ function ContactPage() {
                     <dt className="eyebrow text-gold">{d.label}</dt>
                     <dd className="mt-2 text-[15px] text-navy">
                       {d.label === "Office" && company.googleLocation ? (
-                        <a href={company.googleLocation} target="_blank" rel="noreferrer" className="hover:text-gold transition-colors">
+                        <a
+                          href={company.googleLocation}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="hover:text-gold transition-colors"
+                        >
                           {d.value}
                         </a>
                       ) : (
@@ -66,7 +71,12 @@ function ContactPage() {
               </p>
             )}
             {company.whatsapp ? (
-              <a href={whatsappHref()} target="_blank" rel="noreferrer" className="link-gold mt-8 inline-block text-sm font-medium text-navy">
+              <a
+                href={whatsappHref()}
+                target="_blank"
+                rel="noreferrer"
+                className="link-gold mt-8 inline-block text-sm font-medium text-navy"
+              >
                 Message us on WhatsApp →
               </a>
             ) : null}

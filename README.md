@@ -339,7 +339,6 @@ Use:
 object-fit: cover;
 object-position: center;
 
-
 Add a subtle overlay for text readability.
 
 If the video is bright:
@@ -1848,7 +1847,6 @@ packages
 gallery
 faqs
 
-
 Package model:
 
 id
@@ -1864,7 +1862,6 @@ meals
 transport
 highlights
 images
-
 
 All package fields must be configurable.
 
@@ -1925,43 +1922,42 @@ Footer
 Use a scalable structure similar to:
 
 app/
-  page.tsx
-  about-us/
-  packages/
-  services/
-  contact/
-  hajj/
-  umrah/
-  destinations/
-    [slug]/
+page.tsx
+about-us/
+packages/
+services/
+contact/
+hajj/
+umrah/
+destinations/
+[slug]/
 
 components/
-  layout/
-  hero/
-  destinations/
-  packages/
-  services/
-  forms/
-  animations/
-  ui/
+layout/
+hero/
+destinations/
+packages/
+services/
+forms/
+animations/
+ui/
 
 data/
-  destinations.ts
-  packages.ts
-  services.ts
-  company.ts
-  testimonials.ts
+destinations.ts
+packages.ts
+services.ts
+company.ts
+testimonials.ts
 
 public/
-  images/
-  videos/
-  logo/
+images/
+videos/
+logo/
 
 lib/
-  utils.ts
+utils.ts
 
 styles/
-
 
 Keep the architecture clean.
 
@@ -2553,7 +2549,6 @@ Root Cause
 Resolution
 Files Changed
 
-
 Do not move to the next phase with unresolved blocking errors.
 
 66. FINAL QUALITY STANDARD
@@ -2607,7 +2602,8 @@ Home About Packages Services Destinations Contact
              Stay With You.
 
     From sacred journeys to unforgettable escapes,
-  travel with comfort, care and complete confidence.
+
+travel with comfort, care and complete confidence.
 
       [ Explore Our Packages ]
 
@@ -2616,7 +2612,6 @@ Home About Packages Services Destinations Contact
               SCROLL TO EXPLORE
                    │
                    │
-
 
 FULL-BLEED CINEMATIC VIDEO BACKGROUND
 

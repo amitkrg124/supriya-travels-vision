@@ -5,7 +5,11 @@ export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
       { title: "Terms & Conditions — Supriya Travels of India" },
-      { name: "description", content: "Terms governing bookings, quotations and travel services arranged by Supriya Travels of India." },
+      {
+        name: "description",
+        content:
+          "Terms governing bookings, quotations and travel services arranged by Supriya Travels of India.",
+      },
       { property: "og:title", content: "Terms & Conditions — Supriya Travels of India" },
       { property: "og:description", content: "Terms governing bookings and travel services." },
       { property: "og:url", content: "/terms" },

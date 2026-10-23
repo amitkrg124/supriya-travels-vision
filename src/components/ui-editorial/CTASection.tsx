@@ -22,7 +22,9 @@ export function CTASection({
       <div
         aria-hidden
         className="absolute inset-0"
-        style={{ background: "linear-gradient(to right, rgba(4,17,29,0.92) 0%, rgba(4,17,29,0.55) 100%)" }}
+        style={{
+          background: "linear-gradient(to right, rgba(4,17,29,0.92) 0%, rgba(4,17,29,0.55) 100%)",
+        }}
       />
       <div className="shell relative z-10 py-24 md:py-36">
         <Reveal className="max-w-2xl">
