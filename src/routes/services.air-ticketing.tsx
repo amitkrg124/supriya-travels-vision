@@ -22,9 +22,18 @@ export const Route = createFileRoute("/services/air-ticketing")({
       crumbLabel="Air Ticketing"
       body="Booking a flight is easy. Changing one at short notice is not — which is where a direct line to your travel desk matters."
       items={[
-        { title: "Domestic sectors", text: "Bookings, reissues, date changes and cancellations across domestic routes." },
-        { title: "International routing", text: "Long-haul connections, multi-city itineraries and fare options compared for you." },
-        { title: "Group travel", text: "Coordinated bookings for families, tours and pilgrimage groups." },
+        {
+          title: "Domestic sectors",
+          text: "Bookings, reissues, date changes and cancellations across domestic routes.",
+        },
+        {
+          title: "International routing",
+          text: "Long-haul connections, multi-city itineraries and fare options compared for you.",
+        },
+        {
+          title: "Group travel",
+          text: "Coordinated bookings for families, tours and pilgrimage groups.",
+        },
       ]}
     />
   ),

@@ -6,19 +6,22 @@ const testimonials = [
   {
     name: "Ahmad Rizvi",
     role: "Hajj Pilgrim, 2024",
-    content: "Our Hajj experience with Supriya Travels was truly seamless. From the visa processing to the premium accommodation in Makkah, their dedicated support team was with us every step of the way. Highly recommended for a stress-free sacred journey.",
+    content:
+      "Our Hajj experience with Supriya Travels was truly seamless. From the visa processing to the premium accommodation in Makkah, their dedicated support team was with us every step of the way. Highly recommended for a stress-free sacred journey.",
     rating: 5,
   },
   {
     name: "Priya Sharma",
     role: "Honeymoon in Maldives",
-    content: "Absolutely magical! They tailored our Maldives lagoon retreat perfectly. The overwater villa suggestion was spot on, and all transfers were handled with absolute professionalism. We couldn't have asked for a better honeymoon.",
+    content:
+      "Absolutely magical! They tailored our Maldives lagoon retreat perfectly. The overwater villa suggestion was spot on, and all transfers were handled with absolute professionalism. We couldn't have asked for a better honeymoon.",
     rating: 5,
   },
   {
     name: "Mohammed Tariq",
     role: "Business Traveler",
-    content: "I have been using Supriya Travels for my B2B ticketing and corporate visas for over three years. Their prompt service, transparent pricing, and 24/7 availability make them the best travel partner in New Delhi.",
+    content:
+      "I have been using Supriya Travels for my B2B ticketing and corporate visas for over three years. Their prompt service, transparent pricing, and 24/7 availability make them the best travel partner in New Delhi.",
     rating: 5,
   },
 ];
@@ -30,7 +33,12 @@ export function Testimonials() {
         <SectionHeading
           eyebrow="Testimonials"
           tone="light"
-          title={<>Stories from our <br className="hidden sm:block" />happy travelers.</>}
+          title={
+            <>
+              Stories from our <br className="hidden sm:block" />
+              happy travelers.
+            </>
+          }
         />
         <div className="mt-16 grid gap-6 md:grid-cols-3 md:gap-8">
           {testimonials.map((testimonial, i) => (

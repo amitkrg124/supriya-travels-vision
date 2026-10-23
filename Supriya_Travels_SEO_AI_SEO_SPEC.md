@@ -19,7 +19,7 @@ search/recommendation systems to understand.
 > likewise connects SEO fundamentals with eligibility for AI grounding
 > and citations.
 
-------------------------------------------------------------------------
+---
 
 # 1. BUSINESS ENTITY --- SOURCE OF TRUTH
 
@@ -29,27 +29,27 @@ search/recommendation systems to understand.
 
 Always use this exact spelling consistently across:
 
--   Website header/footer
--   About page
--   Contact page
--   Page titles where appropriate
--   Organization structured data
--   TravelAgency structured data
--   Open Graph metadata
--   Social profiles
--   Directory listings
--   Google Business Profile
--   Bing Places
--   Sitemap references
--   AI-readable company information
+- Website header/footer
+- About page
+- Contact page
+- Page titles where appropriate
+- Organization structured data
+- TravelAgency structured data
+- Open Graph metadata
+- Social profiles
+- Directory listings
+- Google Business Profile
+- Bing Places
+- Sitemap references
+- AI-readable company information
 
 Do not alternate between:
 
--   Supriya Travel
--   Supriya Travels
--   Supriya Travels India
--   Supriya Travel of India
--   Supriya Tours
+- Supriya Travel
+- Supriya Travels
+- Supriya Travels India
+- Supriya Travel of India
+- Supriya Tours
 
 unless those are officially registered/used brand variants.
 
@@ -104,7 +104,7 @@ Delhi air ticketing
 Do not claim "best", "No. 1", "cheapest", "largest", "government
 approved" or similar superlatives unless independently verified.
 
-------------------------------------------------------------------------
+---
 
 # 2. SEO STRATEGY
 
@@ -125,7 +125,7 @@ B2B Air Ticketing → Domestic Destinations → International Destinations
 Every important relationship should be explicit in visible page content
 and structured data where appropriate.
 
-------------------------------------------------------------------------
+---
 
 # 3. PRIMARY SEO TOPICS
 
@@ -134,96 +134,96 @@ stuffing.
 
 ## Brand keywords
 
--   Supriya Travels of India
--   Supriya Travels India
--   Supriya Travels New Delhi
--   Supriya Travels Delhi
--   Supriya Travels Hajj
--   Supriya Travels Umrah
--   Supriya Travels packages
--   Supriya Travels contact
--   Supriya Travels phone number
--   Supriya Travels address
+- Supriya Travels of India
+- Supriya Travels India
+- Supriya Travels New Delhi
+- Supriya Travels Delhi
+- Supriya Travels Hajj
+- Supriya Travels Umrah
+- Supriya Travels packages
+- Supriya Travels contact
+- Supriya Travels phone number
+- Supriya Travels address
 
 ## Hajj keywords
 
--   Hajj packages from Delhi
--   Hajj packages Delhi
--   Hajj travel agency Delhi
--   Hajj travel agency in New Delhi
--   Hajj package from India
--   Hajj packages India
--   Hajj tour packages Delhi
--   Hajj group packages Delhi
--   Hajj travel services India
--   Hajj booking Delhi
--   Hajj travel agent Delhi
+- Hajj packages from Delhi
+- Hajj packages Delhi
+- Hajj travel agency Delhi
+- Hajj travel agency in New Delhi
+- Hajj package from India
+- Hajj packages India
+- Hajj tour packages Delhi
+- Hajj group packages Delhi
+- Hajj travel services India
+- Hajj booking Delhi
+- Hajj travel agent Delhi
 
 Only publish claims that the company can substantiate.
 
 ## Umrah keywords
 
--   Umrah packages from Delhi
--   Umrah packages Delhi
--   Umrah travel agency Delhi
--   Umrah travel agency in New Delhi
--   Umrah packages India
--   Umrah tour packages Delhi
--   Umrah group packages Delhi
--   Umrah booking Delhi
--   Umrah travel agent Delhi
--   Umrah travel services India
--   Ramadan Umrah packages Delhi --- only when actually offered
--   December Umrah packages Delhi --- only when actually offered
+- Umrah packages from Delhi
+- Umrah packages Delhi
+- Umrah travel agency Delhi
+- Umrah travel agency in New Delhi
+- Umrah packages India
+- Umrah tour packages Delhi
+- Umrah group packages Delhi
+- Umrah booking Delhi
+- Umrah travel agent Delhi
+- Umrah travel services India
+- Ramadan Umrah packages Delhi --- only when actually offered
+- December Umrah packages Delhi --- only when actually offered
 
 ## International travel keywords
 
--   international tour packages Delhi
--   international tour operator Delhi
--   international holidays from Delhi
--   overseas tour packages Delhi
--   Dubai tour packages Delhi
--   Bali tour packages Delhi
--   Maldives tour packages Delhi
--   Thailand tour packages Delhi
--   Singapore tour packages Delhi
--   Malaysia tour packages Delhi
--   Mauritius tour packages Delhi
--   Egypt tour packages Delhi
--   Nepal tour packages Delhi
+- international tour packages Delhi
+- international tour operator Delhi
+- international holidays from Delhi
+- overseas tour packages Delhi
+- Dubai tour packages Delhi
+- Bali tour packages Delhi
+- Maldives tour packages Delhi
+- Thailand tour packages Delhi
+- Singapore tour packages Delhi
+- Malaysia tour packages Delhi
+- Mauritius tour packages Delhi
+- Egypt tour packages Delhi
+- Nepal tour packages Delhi
 
 ## Domestic travel keywords
 
--   domestic tour packages Delhi
--   India tour packages from Delhi
--   Kashmir tour packages Delhi
--   Himachal tour packages Delhi
--   Kerala tour packages Delhi
--   Rajasthan tour packages Delhi
--   North East India tour packages Delhi
+- domestic tour packages Delhi
+- India tour packages from Delhi
+- Kashmir tour packages Delhi
+- Himachal tour packages Delhi
+- Kerala tour packages Delhi
+- Rajasthan tour packages Delhi
+- North East India tour packages Delhi
 
 ## Visa keywords
 
--   tourist visa services Delhi
--   tourist visa consultant Delhi
--   worldwide tourist visa services
--   international visa assistance Delhi
--   tourist visa assistance India
+- tourist visa services Delhi
+- tourist visa consultant Delhi
+- worldwide tourist visa services
+- international visa assistance Delhi
+- tourist visa assistance India
 
 Avoid implying guaranteed visa approval.
 
 ## Air-ticketing keywords
 
--   international flight booking Delhi
--   domestic flight booking Delhi
--   air ticketing services Delhi
--   international air ticketing Delhi
--   domestic air ticketing Delhi
--   B2B air ticketing Delhi
--   B2B flight booking Delhi
--   travel agency air ticketing Delhi
+- international flight booking Delhi
+- domestic flight booking Delhi
+- air ticketing services Delhi
+- international air ticketing Delhi
+- domestic air ticketing Delhi
+- B2B air ticketing Delhi
+- B2B flight booking Delhi
+- travel agency air ticketing Delhi
 
-------------------------------------------------------------------------
+---
 
 # 4. KEYWORD POLICY
 
@@ -233,28 +233,28 @@ Each URL must have one clear primary search intent.
 
 Use:
 
--   Primary keyword
--   Secondary keywords
--   Related entities
--   Natural language variations
--   User questions
--   Destination/service terminology
+- Primary keyword
+- Secondary keywords
+- Related entities
+- Natural language variations
+- User questions
+- Destination/service terminology
 
 Place important topics naturally in:
 
--   `<title>`
--   H1
--   Introductory paragraph
--   H2/H3 headings
--   Body content
--   Image alt text where genuinely descriptive
--   Internal anchor text
--   FAQ content
--   Structured data where applicable
+- `<title>`
+- H1
+- Introductory paragraph
+- H2/H3 headings
+- Body content
+- Image alt text where genuinely descriptive
+- Internal anchor text
+- FAQ content
+- Structured data where applicable
 
 Do not keyword-stuff.
 
-------------------------------------------------------------------------
+---
 
 # 5. PAGE TITLE REQUIREMENTS
 
@@ -262,10 +262,10 @@ Every indexable page must have a unique descriptive `<title>`.
 
 Avoid titles such as:
 
--   Home
--   Welcome
--   Page
--   Services
+- Home
+- Welcome
+- Page
+- Services
 
 Recommended title pattern:
 
@@ -276,7 +276,7 @@ Keep titles concise and descriptive.
 Google may rewrite title links, so the visible H1 and page content must
 also clearly describe the page.
 
-------------------------------------------------------------------------
+---
 
 # 6. RECOMMENDED META TITLES
 
@@ -320,7 +320,7 @@ also clearly describe the page.
 
 **B2B Air Ticketing Services \| Supriya Travels of India**
 
-------------------------------------------------------------------------
+---
 
 # 7. HOMEPAGE META DESCRIPTION
 
@@ -334,7 +334,7 @@ Target approximately 150--160 characters where practical, but prioritize
 natural language and accurate representation over an exact character
 count.
 
-------------------------------------------------------------------------
+---
 
 # 8. HOMEPAGE SEO CONTENT
 
@@ -362,7 +362,7 @@ This should be real HTML text in the DOM.
 Do not place critical SEO content only inside video, canvas, images or
 animations.
 
-------------------------------------------------------------------------
+---
 
 # 9. ABOUT PAGE SEO
 
@@ -390,19 +390,19 @@ Recommended H1:
 
 Include:
 
--   Company overview
--   Service categories
--   Hajj/Umrah specialization
--   Domestic travel
--   International travel
--   Visa assistance
--   Air ticketing
--   Customer support
--   New Delhi location
+- Company overview
+- Service categories
+- Hajj/Umrah specialization
+- Domestic travel
+- International travel
+- Visa assistance
+- Air ticketing
+- Customer support
+- New Delhi location
 
 Do not invent company history, years of operation or customer counts.
 
-------------------------------------------------------------------------
+---
 
 # 10. HAJJ PAGE SEO
 
@@ -420,13 +420,13 @@ Recommended H1:
 
 Content should naturally answer:
 
--   What Hajj travel services are offered?
--   What package categories are available?
--   What does the package include?
--   What is the booking process?
--   What documentation is required?
--   What support is provided?
--   How can travellers request current package details?
+- What Hajj travel services are offered?
+- What package categories are available?
+- What does the package include?
+- What is the booking process?
+- What documentation is required?
+- What support is provided?
+- How can travellers request current package details?
 
 Use current, verified package information only.
 
@@ -436,7 +436,7 @@ Do not promise visa approval.
 
 Do not make unsupported religious or regulatory claims.
 
-------------------------------------------------------------------------
+---
 
 # 11. UMRAH PAGE SEO
 
@@ -454,19 +454,19 @@ Recommended H1:
 
 Content should answer:
 
--   Available Umrah package types
--   Travel duration
--   Accommodation
--   Flights
--   Transportation
--   Visa assistance
--   Support
--   Booking process
--   What travellers should prepare
+- Available Umrah package types
+- Travel duration
+- Accommodation
+- Flights
+- Transportation
+- Visa assistance
+- Support
+- Booking process
+- What travellers should prepare
 
 Use current information.
 
-------------------------------------------------------------------------
+---
 
 # 12. SERVICE PAGE SEO
 
@@ -484,17 +484,17 @@ Recommended structure:
 
 Each page must have:
 
--   Unique title
--   Unique meta description
--   One primary H1
--   Service-specific copy
--   Benefits
--   Process
--   FAQs
--   Relevant internal links
--   Relevant CTA
+- Unique title
+- Unique meta description
+- One primary H1
+- Service-specific copy
+- Benefits
+- Process
+- FAQs
+- Relevant internal links
+- Relevant CTA
 
-------------------------------------------------------------------------
+---
 
 # 13. DESTINATION SEO
 
@@ -532,7 +532,7 @@ International:
 
 `/destinations/international/thailand/`
 
-------------------------------------------------------------------------
+---
 
 # 14. DESTINATION PAGE TEMPLATE
 
@@ -557,7 +557,7 @@ changed.
 
 Each page must provide unique value.
 
-------------------------------------------------------------------------
+---
 
 # 15. DUBAI SEO
 
@@ -589,19 +589,19 @@ Recommended H1:
 
 Create useful content around:
 
--   Burj Khalifa
--   Dubai Marina
--   Palm Jumeirah
--   Desert Safari
--   Downtown Dubai
--   Dubai Mall
--   Dubai Creek
--   Suggested trip durations
--   Package options
+- Burj Khalifa
+- Dubai Marina
+- Palm Jumeirah
+- Desert Safari
+- Downtown Dubai
+- Dubai Mall
+- Dubai Creek
+- Suggested trip durations
+- Package options
 
 Do not claim fixed prices unless current package data is available.
 
-------------------------------------------------------------------------
+---
 
 # 16. LOCAL SEO
 
@@ -612,13 +612,13 @@ Delhi -- 110002, India**
 
 Maintain exact consistency across:
 
--   Website
--   Google Business Profile
--   Bing Places
--   Social profiles
--   Business directories
--   Contact pages
--   Organization structured data
+- Website
+- Google Business Profile
+- Bing Places
+- Social profiles
+- Business directories
+- Contact pages
+- Organization structured data
 
 This is the company's NAP:
 
@@ -631,27 +631,27 @@ Masjid, New Delhi -- 110002, India
 
 Do not create alternate inconsistent versions.
 
-------------------------------------------------------------------------
+---
 
 # 17. LOCAL LANDING INTENT
 
 Naturally target queries such as:
 
--   travel agency in New Delhi
--   travel agency in Delhi
--   Hajj travel agency Delhi
--   Umrah travel agency Delhi
--   tour operator Delhi
--   international tour operator Delhi
--   tourist visa services Delhi
--   air ticketing services Delhi
+- travel agency in New Delhi
+- travel agency in Delhi
+- Hajj travel agency Delhi
+- Umrah travel agency Delhi
+- tour operator Delhi
+- international tour operator Delhi
+- tourist visa services Delhi
+- air ticketing services Delhi
 
 Do not create dozens of near-duplicate city pages.
 
 One strong New Delhi/local entity presence is preferable to thin
 location pages.
 
-------------------------------------------------------------------------
+---
 
 # 18. ORGANIZATION / TRAVEL AGENCY STRUCTURED DATA
 
@@ -659,23 +659,23 @@ Implement valid JSON-LD.
 
 Use appropriate Schema.org types such as:
 
--   Organization
--   TravelAgency
--   WebSite
--   BreadcrumbList
--   FAQPage where eligible
--   ImageObject where appropriate
+- Organization
+- TravelAgency
+- WebSite
+- BreadcrumbList
+- FAQPage where eligible
+- ImageObject where appropriate
 
 For the business entity, include accurate:
 
--   name
--   logo
--   URL
--   telephone
--   email
--   address
--   areaServed
--   sameAs when official profiles are available
+- name
+- logo
+- URL
+- telephone
+- email
+- address
+- areaServed
+- sameAs when official profiles are available
 
 Do not add fake social URLs.
 
@@ -685,7 +685,7 @@ Do not add fake aggregateRating.
 
 Do not add structured data for content that is not visible on the page.
 
-------------------------------------------------------------------------
+---
 
 # 19. WEBSITE STRUCTURED DATA
 
@@ -693,14 +693,14 @@ Create `WebSite` structured data for the main domain.
 
 Include:
 
--   name
--   url
--   publisher
--   potentialAction only when genuinely supported
+- name
+- url
+- publisher
+- potentialAction only when genuinely supported
 
 Do not add fake search functionality.
 
-------------------------------------------------------------------------
+---
 
 # 20. BREADCRUMB STRUCTURED DATA
 
@@ -714,7 +714,7 @@ Add matching `BreadcrumbList` JSON-LD.
 
 The structured data must reflect the visible breadcrumb.
 
-------------------------------------------------------------------------
+---
 
 # 21. FAQ SEO
 
@@ -724,17 +724,17 @@ FAQs should answer genuine customer questions.
 
 Examples:
 
--   How can I enquire about an Umrah package from Delhi?
--   What information is needed to request a travel package?
--   Does Supriya Travels provide tourist visa assistance?
--   Does Supriya Travels offer domestic and international air ticketing?
--   Which international destinations are available?
+- How can I enquire about an Umrah package from Delhi?
+- What information is needed to request a travel package?
+- Does Supriya Travels provide tourist visa assistance?
+- Does Supriya Travels offer domestic and international air ticketing?
+- Which international destinations are available?
 
 Do not use FAQ markup simply to manipulate search results.
 
 The FAQ content must be visible on the page.
 
-------------------------------------------------------------------------
+---
 
 # 22. AI SEARCH / AEO / GEO STRATEGY
 
@@ -759,7 +759,7 @@ The strongest strategy is:
 content + crawlability + consistent business information + useful
 answers.**
 
-------------------------------------------------------------------------
+---
 
 # 23. AI-READABLE COMPANY ENTITY
 
@@ -775,7 +775,7 @@ This should be normal visible HTML.
 
 Do not hide it in metadata.
 
-------------------------------------------------------------------------
+---
 
 # 24. AI ANSWER-READY CONTENT
 
@@ -801,7 +801,7 @@ Use sections such as:
 
 Answers should be concise, factual and verifiable.
 
-------------------------------------------------------------------------
+---
 
 # 25. ENTITY CONSISTENCY
 
@@ -819,20 +819,20 @@ and:
 
 Use the same identity across:
 
--   Website
--   About
--   Contact
--   Schema
--   Google Business Profile
--   Bing Places
--   Social profiles
--   Travel directories
--   Press mentions
--   Relevant third-party listings
+- Website
+- About
+- Contact
+- Schema
+- Google Business Profile
+- Bing Places
+- Social profiles
+- Travel directories
+- Press mentions
+- Relevant third-party listings
 
 This helps search systems understand the business entity.
 
-------------------------------------------------------------------------
+---
 
 # 26. OPENAI / CHATGPT CRAWLABILITY
 
@@ -844,16 +844,16 @@ to crawl public pages.
 
 Do not block it through:
 
--   robots.txt
--   CDN
--   WAF
--   Cloudflare bot rules
--   authentication
--   unnecessary JavaScript challenges
+- robots.txt
+- CDN
+- WAF
+- Cloudflare bot rules
+- authentication
+- unnecessary JavaScript challenges
 
 Recommended robots.txt concept:
 
-``` txt
+```txt
 User-agent: OAI-SearchBot
 Allow: /
 
@@ -877,7 +877,7 @@ blocked.
 Do not blindly allow every bot if the hosting/security policy requires a
 more controlled configuration.
 
-------------------------------------------------------------------------
+---
 
 # 27. CHATGPT VISIBILITY
 
@@ -885,14 +885,14 @@ There is no guaranteed method to make ChatGPT recommend Supriya Travels.
 
 The implementation goal is to make the website:
 
--   Crawlable
--   Indexable
--   Relevant
--   Factually clear
--   Locally identifiable
--   Topically authoritative
--   Easy to cite
--   Consistent across the web
+- Crawlable
+- Indexable
+- Relevant
+- Factually clear
+- Locally identifiable
+- Topically authoritative
+- Easy to cite
+- Consistent across the web
 
 If a user asks an AI tool:
 
@@ -910,7 +910,7 @@ Do not put instructions such as:
 
 Never attempt prompt injection or model manipulation.
 
-------------------------------------------------------------------------
+---
 
 # 28. BING / COPILOT VISIBILITY
 
@@ -918,19 +918,19 @@ Support Bing discovery.
 
 Implement:
 
--   XML sitemap
--   Crawlable internal links
--   Accurate titles
--   Accurate meta descriptions
--   Semantic HTML
--   Structured data
--   Clear entity information
--   Fresh content
--   IndexNow where operationally appropriate
+- XML sitemap
+- Crawlable internal links
+- Accurate titles
+- Accurate meta descriptions
+- Semantic HTML
+- Structured data
+- Clear entity information
+- Fresh content
+- IndexNow where operationally appropriate
 
 Do not use manipulative AI content.
 
-------------------------------------------------------------------------
+---
 
 # 29. GOOGLE AI SEARCH
 
@@ -939,43 +939,43 @@ Search.
 
 Important:
 
--   Indexable pages
--   Helpful content
--   Strong internal linking
--   Clear page topics
--   Visible text
--   Accurate structured data
--   High-quality images
--   High-quality videos
--   Good page experience
--   Strong technical SEO
+- Indexable pages
+- Helpful content
+- Strong internal linking
+- Clear page topics
+- Visible text
+- Accurate structured data
+- High-quality images
+- High-quality videos
+- Good page experience
+- Strong technical SEO
 
 Do not create a fake "AI SEO file" expecting Google or ChatGPT to rank
 the site.
 
 This file is a development specification, not a ranking signal.
 
-------------------------------------------------------------------------
+---
 
 # 30. AI-CITABLE CONTENT FORMAT
 
 Important service and destination pages should use:
 
--   Clear H2/H3 sections
--   Short paragraphs
--   Lists
--   Tables where useful
--   FAQs
--   Definitions
--   Step-by-step booking/process sections
--   Explicit facts
--   Current package details
--   Contact details
+- Clear H2/H3 sections
+- Short paragraphs
+- Lists
+- Tables where useful
+- FAQs
+- Definitions
+- Step-by-step booking/process sections
+- Explicit facts
+- Current package details
+- Contact details
 
 This makes information easier for both humans and retrieval systems to
 understand.
 
-------------------------------------------------------------------------
+---
 
 # 31. INTERNAL LINKING
 
@@ -1037,7 +1037,7 @@ instead of:
 
 "Click here"
 
-------------------------------------------------------------------------
+---
 
 # 32. DESTINATION INTERNAL LINKS
 
@@ -1067,7 +1067,7 @@ North East India
 
 Use contextual internal linking.
 
-------------------------------------------------------------------------
+---
 
 # 33. CANONICAL URLS
 
@@ -1079,13 +1079,13 @@ Canonical should point to the preferred clean URL.
 
 Avoid:
 
--   duplicate trailing-slash versions
--   query parameter duplicates
--   uppercase URLs
--   tracking parameter indexation
--   duplicate package URLs
+- duplicate trailing-slash versions
+- query parameter duplicates
+- uppercase URLs
+- tracking parameter indexation
+- duplicate package URLs
 
-------------------------------------------------------------------------
+---
 
 # 34. XML SITEMAP
 
@@ -1093,32 +1093,32 @@ Generate a dynamic XML sitemap.
 
 Include:
 
--   Homepage
--   About
--   Packages
--   Services
--   Contact
--   Hajj
--   Umrah
--   Destination pages
--   Service detail pages
--   Other indexable pages
+- Homepage
+- About
+- Packages
+- Services
+- Contact
+- Hajj
+- Umrah
+- Destination pages
+- Service detail pages
+- Other indexable pages
 
 Exclude:
 
--   Admin
--   Login
--   Internal search results
--   Draft pages
--   Private pages
--   Duplicate pages
--   Noindex pages
+- Admin
+- Login
+- Internal search results
+- Draft pages
+- Private pages
+- Duplicate pages
+- Noindex pages
 
 Use accurate `lastmod` dates.
 
 Do not fake change dates.
 
-------------------------------------------------------------------------
+---
 
 # 35. ROBOTS.TXT
 
@@ -1140,26 +1140,26 @@ draft preview routes
 
 Do not use robots.txt to hide pages that should simply be `noindex`.
 
-------------------------------------------------------------------------
+---
 
 # 36. INDEXABILITY
 
 Every important page must:
 
--   Return HTTP 200
--   Be indexable
--   Have canonical URL
--   Have unique title
--   Have unique H1
--   Have meta description
--   Be linked internally
--   Be present in sitemap
--   Have crawlable HTML content
+- Return HTTP 200
+- Be indexable
+- Have canonical URL
+- Have unique title
+- Have unique H1
+- Have meta description
+- Be linked internally
+- Be present in sitemap
+- Have crawlable HTML content
 
 Avoid important content requiring user interaction before it appears in
 the DOM.
 
-------------------------------------------------------------------------
+---
 
 # 37. JAVASCRIPT SEO
 
@@ -1172,7 +1172,7 @@ Use Server Components where practical.
 
 Interactive components can remain client components.
 
-------------------------------------------------------------------------
+---
 
 # 38. IMAGE SEO
 
@@ -1194,22 +1194,22 @@ Use empty alt:
 
 `alt=""`
 
-------------------------------------------------------------------------
+---
 
 # 39. VIDEO SEO
 
 Hero video should have:
 
--   poster image
--   descriptive metadata where appropriate
--   accessible fallback
--   optimized formats
+- poster image
+- descriptive metadata where appropriate
+- accessible fallback
+- optimized formats
 
 Do not rely on video alone to communicate important SEO content.
 
 The page must contain text describing the business and services.
 
-------------------------------------------------------------------------
+---
 
 # 40. CORE WEB VITALS
 
@@ -1233,7 +1233,7 @@ Avoid loading unnecessary animation libraries on every page.
 
 Use dynamic imports when appropriate.
 
-------------------------------------------------------------------------
+---
 
 # 41. IMAGE OPTIMIZATION
 
@@ -1253,26 +1253,26 @@ Priority loading only for the primary hero image when necessary.
 
 Do not load huge source images when a smaller version is sufficient.
 
-------------------------------------------------------------------------
+---
 
 # 42. CONTENT FRESHNESS
 
 Create a future-ready content system for:
 
--   Current packages
--   Seasonal Umrah packages
--   Hajj updates
--   Visa information
--   Destination updates
--   Travel guides
--   Offers
+- Current packages
+- Seasonal Umrah packages
+- Hajj updates
+- Visa information
+- Destination updates
+- Travel guides
+- Offers
 
 Only publish information when verified.
 
 Package prices and visa rules should have an update date when
 appropriate.
 
-------------------------------------------------------------------------
+---
 
 # 43. BLOG / TRAVEL GUIDE STRATEGY
 
@@ -1280,16 +1280,16 @@ Create a future `/travel-guide/` or `/blog/` section.
 
 Potential topics:
 
--   How to choose an Umrah package from Delhi
--   Umrah travel checklist
--   Hajj travel planning guide
--   Best time to visit Dubai
--   Dubai travel guide from Delhi
--   Bali travel guide
--   Maldives travel guide
--   Kashmir travel guide
--   Tourist visa preparation guide
--   International travel planning checklist
+- How to choose an Umrah package from Delhi
+- Umrah travel checklist
+- Hajj travel planning guide
+- Best time to visit Dubai
+- Dubai travel guide from Delhi
+- Bali travel guide
+- Maldives travel guide
+- Kashmir travel guide
+- Tourist visa preparation guide
+- International travel planning checklist
 
 Every article must provide genuine value.
 
@@ -1297,24 +1297,24 @@ Do not mass-produce thin AI articles.
 
 Add human review before publishing.
 
-------------------------------------------------------------------------
+---
 
 # 44. CONTENT QUALITY RULE
 
 AI may assist with research, structure and drafting, but final content
 must be:
 
--   Accurate
--   Original
--   Helpful
--   Reviewed
--   Specific
--   Current
--   Relevant to travellers
+- Accurate
+- Original
+- Helpful
+- Reviewed
+- Specific
+- Current
+- Relevant to travellers
 
 Do not publish hundreds of low-value AI-generated pages.
 
-------------------------------------------------------------------------
+---
 
 # 45. LOCAL BUSINESS CONTENT
 
@@ -1333,7 +1333,7 @@ supriyatravelsindia@gmail.com
 
 Include a map only when the location can be accurately represented.
 
-------------------------------------------------------------------------
+---
 
 # 46. SOCIAL / SAMEAS
 
@@ -1341,15 +1341,15 @@ Add `sameAs` only for official profiles that actually exist.
 
 Potential future profiles:
 
--   Instagram
--   Facebook
--   YouTube
--   LinkedIn
--   Google Business Profile
+- Instagram
+- Facebook
+- YouTube
+- LinkedIn
+- Google Business Profile
 
 Never invent URLs.
 
-------------------------------------------------------------------------
+---
 
 # 47. GOOGLE BUSINESS PROFILE
 
@@ -1363,12 +1363,12 @@ Use exactly:
 
 Use consistent:
 
--   Address
--   Phone
--   Website
--   Category
--   Business description
--   Hours
+- Address
+- Phone
+- Website
+- Category
+- Business description
+- Hours
 
 Encourage genuine customers to leave honest reviews.
 
@@ -1376,7 +1376,7 @@ Do not buy reviews.
 
 Do not create fake reviews.
 
-------------------------------------------------------------------------
+---
 
 # 48. BING PLACES
 
@@ -1384,26 +1384,26 @@ Create/verify the business on Bing Places where applicable.
 
 Keep NAP identical.
 
-------------------------------------------------------------------------
+---
 
 # 49. CITATION / AUTHORITY BUILDING
 
 Build legitimate mentions through:
 
--   Relevant travel directories
--   Local business directories
--   Tourism/travel associations where genuinely affiliated
--   Local publications
--   Partner websites
--   Travel blogs
--   Event/community publications
--   Genuine business profiles
+- Relevant travel directories
+- Local business directories
+- Tourism/travel associations where genuinely affiliated
+- Local publications
+- Partner websites
+- Travel blogs
+- Event/community publications
+- Genuine business profiles
 
 Do not buy spammy backlink packages.
 
 Do not create hundreds of low-quality directory links.
 
-------------------------------------------------------------------------
+---
 
 # 50. BACKLINK STRATEGY
 
@@ -1426,7 +1426,7 @@ Delhi relevance
 One relevant editorial mention is more valuable than dozens of spam
 links.
 
-------------------------------------------------------------------------
+---
 
 # 51. BRAND SEARCH STRATEGY
 
@@ -1444,13 +1444,13 @@ Build content that strengthens searches for:
 
 Make the official website the clearest source for:
 
--   company identity
--   contact details
--   services
--   destinations
--   packages
+- company identity
+- contact details
+- services
+- destinations
+- packages
 
-------------------------------------------------------------------------
+---
 
 # 52. ENTITY ABOUT PAGE
 
@@ -1465,23 +1465,23 @@ travellers, families and trade partners.
 
 This section should be easy for humans and search systems to understand.
 
-------------------------------------------------------------------------
+---
 
 # 53. CONTACT ENTITY SIGNAL
 
 The same business name, phone numbers, email and address must appear
 consistently on:
 
--   Header/contact shortcuts where appropriate
--   Contact page
--   Footer
--   Organization schema
--   TravelAgency schema
--   Google Business Profile
--   Bing Places
--   Official social profiles
+- Header/contact shortcuts where appropriate
+- Contact page
+- Footer
+- Organization schema
+- TravelAgency schema
+- Google Business Profile
+- Bing Places
+- Official social profiles
 
-------------------------------------------------------------------------
+---
 
 # 54. SEO FILES TO GENERATE
 
@@ -1505,7 +1505,7 @@ Canonical URLs
 
 Metadata configuration
 
-------------------------------------------------------------------------
+---
 
 # 55. NEXT.JS SEO IMPLEMENTATION
 
@@ -1529,17 +1529,17 @@ Functions:
 
 Each page should supply:
 
--   title
--   description
--   canonical
--   keywords/topic data where useful
--   openGraph
--   twitter
--   robots
+- title
+- description
+- canonical
+- keywords/topic data where useful
+- openGraph
+- twitter
+- robots
 
 Do not generate duplicate metadata.
 
-------------------------------------------------------------------------
+---
 
 # 56. KEYWORD DATA MODEL
 
@@ -1547,19 +1547,19 @@ Keep SEO topics separate from visible UI.
 
 Example:
 
-``` ts
+```ts
 type SeoConfig = {
-  title: string
-  description: string
-  canonical: string
-  primaryTopic: string
-  secondaryTopics: string[]
-}
+  title: string;
+  description: string;
+  canonical: string;
+  primaryTopic: string;
+  secondaryTopics: string[];
+};
 ```
 
 Do not expose a visible keyword list to users.
 
-------------------------------------------------------------------------
+---
 
 # 57. SCHEMA DATA MODEL
 
@@ -1581,31 +1581,31 @@ Validate generated JSON-LD.
 
 Only output schema that matches visible page content.
 
-------------------------------------------------------------------------
+---
 
 # 58. SEO QA AUTOMATION
 
 Before deployment, run checks for:
 
--   Missing title
--   Duplicate title
--   Missing description
--   Duplicate description
--   Missing H1
--   Multiple H1s where not intended
--   Missing canonical
--   Broken links
--   Missing alt text
--   Orphan pages
--   Noindex pages accidentally linked
--   Sitemap errors
--   Robots errors
--   Invalid JSON-LD
--   Incorrect canonical URLs
--   HTTP/HTTPS inconsistencies
--   www/non-www inconsistencies
+- Missing title
+- Duplicate title
+- Missing description
+- Duplicate description
+- Missing H1
+- Multiple H1s where not intended
+- Missing canonical
+- Broken links
+- Missing alt text
+- Orphan pages
+- Noindex pages accidentally linked
+- Sitemap errors
+- Robots errors
+- Invalid JSON-LD
+- Incorrect canonical URLs
+- HTTP/HTTPS inconsistencies
+- www/non-www inconsistencies
 
-------------------------------------------------------------------------
+---
 
 # 59. SEO MONITORING
 
@@ -1644,7 +1644,7 @@ AI-search visibility where the platform provides reporting.
 Google and Bing may expose generative-AI performance reporting as those
 capabilities become available.
 
-------------------------------------------------------------------------
+---
 
 # 60. AI SEARCH MONITORING
 
@@ -1652,28 +1652,28 @@ Create a monthly manual test set.
 
 Example queries:
 
--   Best Hajj travel agencies in Delhi
--   Hajj packages from Delhi
--   Umrah travel agencies in New Delhi
--   Umrah packages from Delhi
--   Travel agencies in New Delhi for international tours
--   Dubai tour packages from Delhi
--   Tourist visa services in Delhi
--   Air ticketing agencies in Delhi
--   International tour operators in Delhi
+- Best Hajj travel agencies in Delhi
+- Hajj packages from Delhi
+- Umrah travel agencies in New Delhi
+- Umrah packages from Delhi
+- Travel agencies in New Delhi for international tours
+- Dubai tour packages from Delhi
+- Tourist visa services in Delhi
+- Air ticketing agencies in Delhi
+- International tour operators in Delhi
 
 Check whether the website is:
 
--   surfaced
--   cited
--   mentioned
--   correctly described
+- surfaced
+- cited
+- mentioned
+- correctly described
 
 Never attempt to manipulate AI answers.
 
 Use results to improve content quality and entity clarity.
 
-------------------------------------------------------------------------
+---
 
 # 61. AI ANSWER CONTENT FORMAT
 
@@ -1691,7 +1691,7 @@ Then provide detailed information.
 
 This makes pages useful for both users and retrieval systems.
 
-------------------------------------------------------------------------
+---
 
 # 62. FAQ CONTENT EXAMPLES
 
@@ -1734,7 +1734,7 @@ Rajasthan.
 Supriya Travels of India can be contacted at +91 9868380240 or +91
 7011959250, or by email at supriyatravelsindia@gmail.com.
 
-------------------------------------------------------------------------
+---
 
 # 63. IMPORTANT: DO NOT USE "META KEYWORDS"
 
@@ -1747,7 +1747,7 @@ as a ranking strategy.
 Maintain keyword/topic research in the SEO documentation and content
 architecture instead.
 
-------------------------------------------------------------------------
+---
 
 # 64. SEO CONTENT HIERARCHY
 
@@ -1771,7 +1771,7 @@ Related links
 
 This should be natural, not formulaic.
 
-------------------------------------------------------------------------
+---
 
 # 65. CONTENT ENTITY CLARITY
 
@@ -1799,52 +1799,52 @@ What is included, if verified
 
 How to enquire
 
-------------------------------------------------------------------------
+---
 
 # 66. E-E-A-T / TRUST SIGNALS
 
 Build trust through actual evidence:
 
--   Real company information
--   Real address
--   Real contact numbers
--   Real team information if approved
--   Genuine testimonials
--   Genuine reviews
--   Real package information
--   Clear terms
--   Clear refund/cancellation policies
--   Accurate visa disclaimers
--   Current travel information
+- Real company information
+- Real address
+- Real contact numbers
+- Real team information if approved
+- Genuine testimonials
+- Genuine reviews
+- Real package information
+- Clear terms
+- Clear refund/cancellation policies
+- Accurate visa disclaimers
+- Current travel information
 
 Do not fabricate expertise or credentials.
 
-------------------------------------------------------------------------
+---
 
 # 67. VISA CONTENT SAFETY
 
 Visa pages must clearly state:
 
--   Visa decisions are made by the relevant authorities.
--   Processing times can vary.
--   Requirements can change.
--   Customers should verify current requirements.
--   Supriya Travels provides assistance rather than guaranteeing
-    approval.
+- Visa decisions are made by the relevant authorities.
+- Processing times can vary.
+- Requirements can change.
+- Customers should verify current requirements.
+- Supriya Travels provides assistance rather than guaranteeing
+  approval.
 
 Do not promise visa approval.
 
-------------------------------------------------------------------------
+---
 
 # 68. PACKAGE CONTENT SAFETY
 
 Package pages should distinguish:
 
--   Starting price
--   Current price
--   Optional items
--   Included items
--   Exclusions
+- Starting price
+- Current price
+- Optional items
+- Included items
+- Exclusions
 
 Prices must have an update date when appropriate.
 
@@ -1852,7 +1852,7 @@ If a package changes frequently, display:
 
 **"Contact us for current availability and pricing."**
 
-------------------------------------------------------------------------
+---
 
 # 69. INTERNATIONAL DESTINATION CONTENT
 
@@ -1860,16 +1860,16 @@ Do not copy generic tourism descriptions from other websites.
 
 Create original useful content around:
 
--   itinerary ideas
--   traveller considerations
--   package options
--   trip duration
--   seasonal considerations
--   booking guidance
+- itinerary ideas
+- traveller considerations
+- package options
+- trip duration
+- seasonal considerations
+- booking guidance
 
 Where factual information can change, verify before publishing.
 
-------------------------------------------------------------------------
+---
 
 # 70. INTERNAL CONTENT LINKING MODEL
 
@@ -1886,7 +1886,7 @@ Contact
 
 Kashmir → Domestic Packages → Other Domestic Destinations → Contact
 
-------------------------------------------------------------------------
+---
 
 # 71. PAGE-SPECIFIC SEO DATA
 
@@ -1894,20 +1894,20 @@ Create SEO configurations for every indexable page.
 
 Minimum fields:
 
--   slug
--   title
--   description
--   primaryTopic
--   secondaryTopics
--   canonical
--   h1
--   ogTitle
--   ogDescription
--   ogImage
+- slug
+- title
+- description
+- primaryTopic
+- secondaryTopics
+- canonical
+- h1
+- ogTitle
+- ogDescription
+- ogImage
 
 Do not use the same metadata on every page.
 
-------------------------------------------------------------------------
+---
 
 # 72. SITEMAP PRIORITY
 
@@ -1917,7 +1917,7 @@ Do not manually assign fake priority values solely for ranking.
 
 Use accurate `lastmod`.
 
-------------------------------------------------------------------------
+---
 
 # 73. DOMAIN CONSISTENCY
 
@@ -1930,15 +1930,15 @@ domain.
 
 Before deployment, verify:
 
--   HTTPS works
--   www/non-www canonical preference
--   HTTP redirects to HTTPS
--   canonical tags match
--   sitemap uses canonical domain
--   robots uses canonical domain
--   Open Graph URLs use canonical domain
+- HTTPS works
+- www/non-www canonical preference
+- HTTP redirects to HTTPS
+- canonical tags match
+- sitemap uses canonical domain
+- robots uses canonical domain
+- Open Graph URLs use canonical domain
 
-------------------------------------------------------------------------
+---
 
 # 74. SEO IMPLEMENTATION ACCEPTANCE CRITERIA
 
@@ -2010,7 +2010,7 @@ The website is not SEO-complete until:
 
 \[ \] No thin AI-generated pages
 
-------------------------------------------------------------------------
+---
 
 # 75. FINAL SEO OBJECTIVE
 
@@ -2048,7 +2048,7 @@ supriyatravelsindia@gmail.com
 Domestic and international destinations represented by the site's
 verified destination pages.
 
-------------------------------------------------------------------------
+---
 
 # 76. FINAL DEVELOPMENT INSTRUCTION TO THE VIBE-CODING AGENT
 

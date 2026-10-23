@@ -19,8 +19,10 @@ const DESTINATIONS: DestinationItem[] = [
     name: "Makkah & Madinah",
     region: "Saudi Arabia",
     category: "sacred",
-    description: "The holiest sites in Islam, offering life-transforming Hajj & Umrah experiences with luxury Haram stays.",
-    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=1600&auto=format&fit=crop",
+    description:
+      "The holiest sites in Islam, offering life-transforming Hajj & Umrah experiences with luxury Haram stays.",
+    image:
+      "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=1600&auto=format&fit=crop",
     link: "/umrah",
     highlights: ["Masjid al-Haram", "Masjid an-Nabawi", "Mount Arafat", "Ziyarat Tours"],
     bestTime: "Year-round / Ramadan & Winter",
@@ -31,7 +33,8 @@ const DESTINATIONS: DestinationItem[] = [
     region: "United Arab Emirates",
     category: "sacred",
     description: "Futuristic architecture, world-class luxury shopping, and golden desert safaris.",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop",
     link: "/destinations/dubai",
     highlights: ["Burj Khalifa", "Palm Jumeirah", "Desert Dunes", "Dubai Marina"],
     bestTime: "November to March",
@@ -41,8 +44,10 @@ const DESTINATIONS: DestinationItem[] = [
     name: "Kashmir Valley",
     region: "India",
     category: "alpine",
-    description: "Snow-dusted pine mountains, serene Dal Lake houseboats, and vibrant saffron fields.",
-    image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1600&auto=format&fit=crop",
+    description:
+      "Snow-dusted pine mountains, serene Dal Lake houseboats, and vibrant saffron fields.",
+    image:
+      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1600&auto=format&fit=crop",
     link: "/destinations/kashmir",
     highlights: ["Gulmarg Gondola", "Dal Lake Shikara", "Pahalgam Valleys", "Sonamarg"],
     bestTime: "April to October & Winter Snow",
@@ -53,7 +58,8 @@ const DESTINATIONS: DestinationItem[] = [
     region: "Indonesia",
     category: "tropical",
     description: "Lush terraced hills, cliffside temples, and secluded luxury beachfront villas.",
-    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1600&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1600&auto=format&fit=crop",
     link: "/destinations/bali",
     highlights: ["Ubud Sacred Forest", "Tanah Lot", "Nusa Penida", "Seminyak Sunsets"],
     bestTime: "April to October",
@@ -63,8 +69,10 @@ const DESTINATIONS: DestinationItem[] = [
     name: "Maldives Atolls",
     region: "Indian Ocean",
     category: "tropical",
-    description: "Ultra-luxurious overwater bungalows perched over sapphire lagoons and coral gardens.",
-    image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1600&auto=format&fit=crop",
+    description:
+      "Ultra-luxurious overwater bungalows perched over sapphire lagoons and coral gardens.",
+    image:
+      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1600&auto=format&fit=crop",
     link: "/destinations/maldives",
     highlights: ["Overwater Villas", "Manta Ray Diving", "Private Sandbanks", "Sunset Cruises"],
     bestTime: "November to April",
@@ -75,7 +83,8 @@ const DESTINATIONS: DestinationItem[] = [
     region: "Arctic & Fjords",
     category: "polar",
     description: "Glacial wonderlands, dancing Aurora Borealis, and remote untouched polar fjords.",
-    image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/09fd4820-ff21-47a8-b915-20b74cb1a37a_3840w.png",
+    image:
+      "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/09fd4820-ff21-47a8-b915-20b74cb1a37a_3840w.png",
     link: "/destinations",
     highlights: ["Northern Lights", "Icefjord Sailing", "Dog Sledding", "Glacier Hikes"],
     bestTime: "October to March",
@@ -85,8 +94,10 @@ const DESTINATIONS: DestinationItem[] = [
     name: "Egypt & Cairo",
     region: "North Africa",
     category: "sacred",
-    description: "Millennia of historic majesty along the Nile, from the Pyramids to the Valley of the Kings.",
-    image: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=1600&auto=format&fit=crop",
+    description:
+      "Millennia of historic majesty along the Nile, from the Pyramids to the Valley of the Kings.",
+    image:
+      "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=1600&auto=format&fit=crop",
     link: "/destinations/egypt",
     highlights: ["Giza Pyramids", "Nile Cruise", "Luxor Temples", "Khan el-Khalili"],
     bestTime: "October to April",
@@ -97,7 +108,8 @@ const DESTINATIONS: DestinationItem[] = [
     region: "India",
     category: "alpine",
     description: "High mountain passes, apple orchards, and peaceful Himalayan sanctuaries.",
-    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1600&auto=format&fit=crop",
     link: "/destinations/himachal-pradesh",
     highlights: ["Manali Rohtang", "Shimla Ridge", "Spiti Valley", "Dharamshala"],
     bestTime: "March to June & Winter Snow",
@@ -123,7 +135,7 @@ export function PopularDestinationsSection() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     const elements = document.querySelectorAll(".fade-up-element");
@@ -158,9 +170,7 @@ export function PopularDestinationsSection() {
           <div>
             <div className="flex items-center gap-3">
               <span className="h-px w-8 bg-gold" />
-              <span className="eyebrow text-gold">
-                World-Class Escapes
-              </span>
+              <span className="eyebrow text-gold">World-Class Escapes</span>
             </div>
             <h2 className="display-lg text-white mt-2">
               Popular <em className="text-gold font-display italic">Destinations</em>
@@ -179,9 +189,7 @@ export function PopularDestinationsSection() {
               <button
                 key={cat.id}
                 onClick={() =>
-                  setSelectedCategory(
-                    cat.id as "all" | "sacred" | "tropical" | "alpine" | "polar"
-                  )
+                  setSelectedCategory(cat.id as "all" | "sacred" | "tropical" | "alpine" | "polar")
                 }
                 className={`px-4 py-2 rounded-full font-sans text-xs uppercase tracking-wider transition-all duration-300 ${
                   selectedCategory === cat.id
@@ -229,9 +237,7 @@ export function PopularDestinationsSection() {
 
               {/* Bottom Content */}
               <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7 flex flex-col justify-end z-10">
-                <h3 className="font-display text-2xl sm:text-3xl text-white">
-                  {dest.name}
-                </h3>
+                <h3 className="font-display text-2xl sm:text-3xl text-white">{dest.name}</h3>
                 <p className="font-sans text-xs sm:text-sm text-white/75 mt-2 line-clamp-2 leading-relaxed">
                   {dest.description}
                 </p>

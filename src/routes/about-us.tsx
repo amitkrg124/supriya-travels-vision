@@ -23,9 +23,18 @@ export const Route = createFileRoute("/about-us")({
 });
 
 const pillars = [
-  { title: "Our Mission", text: "To make every journey — sacred or leisure — organised, comfortable and clearly understood from the first enquiry to the return flight." },
-  { title: "Our Vision", text: "To be the travel company Indian families return to for pilgrimage, holidays and everything in between." },
-  { title: "Our Commitment", text: "Honest information, careful planning and a team that remains reachable while you are travelling." },
+  {
+    title: "Our Mission",
+    text: "To make every journey — sacred or leisure — organised, comfortable and clearly understood from the first enquiry to the return flight.",
+  },
+  {
+    title: "Our Vision",
+    text: "To be the travel company Indian families return to for pilgrimage, holidays and everything in between.",
+  },
+  {
+    title: "Our Commitment",
+    text: "Honest information, careful planning and a team that remains reachable while you are travelling.",
+  },
 ];
 
 function AboutPage() {
@@ -48,7 +57,11 @@ function AboutPage() {
       <section className="bg-background py-24 md:py-32">
         <div className="shell grid gap-14 lg:grid-cols-[1fr_0.85fr] lg:gap-24">
           <div>
-            <SectionHeading eyebrow="The Company" title="A travel company built around care." intro={company.description} />
+            <SectionHeading
+              eyebrow="The Company"
+              title="A travel company built around care."
+              intro={company.description}
+            />
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground">
                 Our work covers Hajj and Umrah packages, domestic and international tour packages,
@@ -58,7 +71,13 @@ function AboutPage() {
               </p>
             </Reveal>
           </div>
-          <ImageReveal src={aboutImage} alt="Travel documents on a desk" className="aspect-[4/5]" width={1400} height={1750} />
+          <ImageReveal
+            src={aboutImage}
+            alt="Travel documents on a desk"
+            className="aspect-[4/5]"
+            width={1400}
+            height={1750}
+          />
         </div>
       </section>
 
@@ -69,7 +88,9 @@ function AboutPage() {
             <div className="max-w-3xl rounded-sm border border-border p-8 bg-muted/20">
               <h2 className="font-display text-2xl text-navy">Supriya Travels of India</h2>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Supriya Travels of India is a New Delhi-based travel company providing Hajj and Umrah packages, domestic and international tours, worldwide tourist visa assistance and air ticketing services for individual travellers, families and trade partners.
+                Supriya Travels of India is a New Delhi-based travel company providing Hajj and
+                Umrah packages, domestic and international tours, worldwide tourist visa assistance
+                and air ticketing services for individual travellers, families and trade partners.
               </p>
             </div>
           </Reveal>
@@ -92,7 +113,14 @@ function AboutPage() {
       <section className="bg-navy py-0">
         <div className="grid lg:grid-cols-2">
           <div className="relative min-h-[360px] lg:min-h-[560px]">
-            <img src={sacredImage} alt="Pilgrims at dawn" width={1600} height={1100} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+            <img
+              src={sacredImage}
+              alt="Pilgrims at dawn"
+              width={1600}
+              height={1100}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
           </div>
           <div className="flex items-center px-6 py-20 md:px-16">
             <div className="max-w-xl">

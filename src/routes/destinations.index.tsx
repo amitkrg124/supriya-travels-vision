@@ -4,7 +4,11 @@ import { SectionHeading } from "@/components/ui-editorial/SectionHeading";
 import { Reveal } from "@/components/animations/Reveal";
 import { DestinationCard } from "@/components/destinations/DestinationCard";
 import { CTASection } from "@/components/ui-editorial/CTASection";
-import { internationalDestinations, domesticDestinations, getDestination } from "@/data/destinations";
+import {
+  internationalDestinations,
+  domesticDestinations,
+  getDestination,
+} from "@/data/destinations";
 import { createMetadata, createCanonicalLink } from "@/lib/seo";
 
 export const Route = createFileRoute("/destinations/")({

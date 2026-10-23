@@ -65,16 +65,25 @@ function UmrahPage() {
           <SectionHeading eyebrow="What Is Arranged" title="Included in your journey." />
           <div className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-3">
             {inclusions.map((item, i) => (
-              <Reveal key={item.title} delay={(i % 3) * 0.05} className="border-t border-border pt-6">
+              <Reveal
+                key={item.title}
+                delay={(i % 3) * 0.05}
+                className="border-t border-border pt-6"
+              >
                 <h3 className="font-display text-2xl text-navy">{item.title}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{item.text}</p>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+                  {item.text}
+                </p>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <CTASection title="Ready to plan your Umrah?" text="Share your preferred dates and we will prepare the options." />
+      <CTASection
+        title="Ready to plan your Umrah?"
+        text="Share your preferred dates and we will prepare the options."
+      />
     </>
   );
 }

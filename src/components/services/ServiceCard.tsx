@@ -6,7 +6,9 @@ export function ServiceCard({ service }: { service: Service }) {
     <article className="group border-t border-border py-8">
       <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-baseline">
         <div>
-          <h3 className="font-display text-2xl leading-tight text-navy md:text-3xl">{service.title}</h3>
+          <h3 className="font-display text-2xl leading-tight text-navy md:text-3xl">
+            {service.title}
+          </h3>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-muted-foreground">
             {service.description}
           </p>

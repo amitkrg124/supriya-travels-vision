@@ -31,7 +31,10 @@ type BaseProps = VariantProps<typeof pillVariants> & {
 
 export function Arrow() {
   return (
-    <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+    <span
+      aria-hidden
+      className="inline-block transition-transform duration-300 group-hover:translate-x-1"
+    >
       &#8594;
     </span>
   );

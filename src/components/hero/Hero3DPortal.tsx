@@ -5,8 +5,7 @@ const HERO_BG =
   "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1fb0d000-28e3-4a63-9571-a768c099c566_3840w.png";
 const HERO_GROUND =
   "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/05b11cf5-028b-41dd-9248-8b56e028f570_3840w.png";
-const PORTAL_VIEW =
-  "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1968";
+const PORTAL_VIEW = "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1968";
 
 export function Hero3DPortal() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -138,8 +137,7 @@ export function Hero3DPortal() {
             <div
               className="absolute inset-0 rounded-t-[160px] border-[12px] sm:border-[14px] md:border-[16px] border-[#EAE6DF] shadow-[0_30px_70px_rgba(0,0,0,0.9),inset_0_0_25px_rgba(0,0,0,0.7)] overflow-hidden preserve-3d"
               style={{
-                boxShadow:
-                  "0 0 50px rgba(200, 155, 60, 0.28), 0 25px 60px rgba(0,0,0,0.85)",
+                boxShadow: "0 0 50px rgba(200, 155, 60, 0.28), 0 25px 60px rgba(0,0,0,0.85)",
               }}
             >
               {/* Inner Portal View (The Destination through the doorway) */}
@@ -212,7 +210,8 @@ export function Hero3DPortal() {
             </h1>
 
             <p className="font-sans text-xs sm:text-sm md:text-base text-white/90 max-w-[240px] sm:max-w-md mx-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)] font-light leading-relaxed">
-              Step through our gateway into sacred Hajj & Umrah pilgrimages and bespoke global escapes.
+              Step through our gateway into sacred Hajj & Umrah pilgrimages and bespoke global
+              escapes.
             </p>
 
             {/* Action Buttons */}

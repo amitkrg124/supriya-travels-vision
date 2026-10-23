@@ -17,7 +17,7 @@ export const Route = createFileRoute("/packages")({
       dest: search.dest as string | undefined,
       dur: search.dur as string | undefined,
       type: search.type as string | undefined,
-    }
+    };
   },
   head: () => ({
     meta: createMetadata({

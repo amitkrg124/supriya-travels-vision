@@ -112,7 +112,12 @@ export function Header() {
                 ))}
               </ul>
               <div className="mt-12 border-t border-white/15 pt-8">
-                <PillLink to="/contact" variant="gold" className="w-full" onClick={() => setOpen(false)}>
+                <PillLink
+                  to="/contact"
+                  variant="gold"
+                  className="w-full"
+                  onClick={() => setOpen(false)}
+                >
                   Plan Your Journey
                 </PillLink>
               </div>

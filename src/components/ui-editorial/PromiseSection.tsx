@@ -64,7 +64,8 @@ export function PromiseSection() {
         <div className="relative select-none my-6 sm:my-10">
           {/* Base Muted Layer */}
           <h2 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-white/20 leading-[1.08]">
-            We do not simply arrange trips. We create seamless gateways into journeys of faith, wonder, and lifelong memories.
+            We do not simply arrange trips. We create seamless gateways into journeys of faith,
+            wonder, and lifelong memories.
           </h2>
 
           {/* Overlapping Gold Revealing Layer with Dynamic Clip Path */}
@@ -74,7 +75,8 @@ export function PromiseSection() {
               clipPath: `inset(0 ${insetRight}% 0 0)`,
             }}
           >
-            We do not simply arrange trips. We create seamless gateways into journeys of faith, wonder, and lifelong memories.
+            We do not simply arrange trips. We create seamless gateways into journeys of faith,
+            wonder, and lifelong memories.
           </h2>
         </div>
 
@@ -84,11 +86,10 @@ export function PromiseSection() {
             <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
               <iconify-icon icon="lucide:shield-check" class="text-2xl" />
             </div>
-            <h3 className="font-display text-2xl text-white">
-              Sacred Integrity
-            </h3>
+            <h3 className="font-display text-2xl text-white">Sacred Integrity</h3>
             <p className="font-sans text-xs sm:text-sm text-white/70 mt-2 leading-relaxed">
-              Every Hajj and Umrah pilgrimage is coordinated with authentic guidance, authorized documentation, and 5-star proximity to the holy Harams.
+              Every Hajj and Umrah pilgrimage is coordinated with authentic guidance, authorized
+              documentation, and 5-star proximity to the holy Harams.
             </p>
           </div>
 
@@ -96,11 +97,10 @@ export function PromiseSection() {
             <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
               <iconify-icon icon="lucide:sparkles" class="text-2xl" />
             </div>
-            <h3 className="font-display text-2xl text-white">
-              Bespoke Precision
-            </h3>
+            <h3 className="font-display text-2xl text-white">Bespoke Precision</h3>
             <p className="font-sans text-xs sm:text-sm text-white/70 mt-2 leading-relaxed">
-              Tailor-made itineraries from flight bookings and luxury stays to private desert camps, aligned precisely to your dates and preferences.
+              Tailor-made itineraries from flight bookings and luxury stays to private desert camps,
+              aligned precisely to your dates and preferences.
             </p>
           </div>
 
@@ -108,11 +108,10 @@ export function PromiseSection() {
             <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
               <iconify-icon icon="lucide:headset" class="text-2xl" />
             </div>
-            <h3 className="font-display text-2xl text-white">
-              24/7 Concierge
-            </h3>
+            <h3 className="font-display text-2xl text-white">24/7 Concierge</h3>
             <p className="font-sans text-xs sm:text-sm text-white/70 mt-2 leading-relaxed">
-              Direct contact with dedicated travel specialists from the moment you consult us until your safe return back home.
+              Direct contact with dedicated travel specialists from the moment you consult us until
+              your safe return back home.
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 export const BASE_URL = "https://supriyatravelsindia.com";
 export const DEFAULT_TITLE = "Supriya Travels of India — Hajj, Umrah & Global Tours";
-export const DEFAULT_DESCRIPTION = "Supriya Travels of India offers Hajj and Umrah packages, domestic and international tours, worldwide tourist visas and air ticketing services from New Delhi.";
+export const DEFAULT_DESCRIPTION =
+  "Supriya Travels of India offers Hajj and Umrah packages, domestic and international tours, worldwide tourist visas and air ticketing services from New Delhi.";
 
 export interface SeoOptions {
   title?: string;
@@ -45,7 +46,8 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "TravelAgency", "LocalBusiness"],
   name: "Supriya Travels of India",
-  description: "Supriya Travels of India provides Hajj and Umrah packages, domestic and international tours, worldwide tourist visas and air ticketing services.",
+  description:
+    "Supriya Travels of India provides Hajj and Umrah packages, domestic and international tours, worldwide tourist visas and air ticketing services.",
   url: BASE_URL,
   logo: `${BASE_URL}/favicon.png`,
   telephone: ["+91 9868380240", "+91 7011959250"],
@@ -55,12 +57,12 @@ export const organizationSchema = {
     streetAddress: "A-13, D.D.A. Flats, Mata Sundri Road, Near Farsh Wali Masjid",
     addressLocality: "New Delhi",
     postalCode: "110002",
-    addressCountry: "IN"
+    addressCountry: "IN",
   },
   areaServed: {
     "@type": "Country",
-    name: "India"
-  }
+    name: "India",
+  },
 };
 
 export const websiteSchema = {
@@ -70,8 +72,8 @@ export const websiteSchema = {
   url: BASE_URL,
   publisher: {
     "@type": "Organization",
-    name: "Supriya Travels of India"
-  }
+    name: "Supriya Travels of India",
+  },
 };
 
 export function createBreadcrumbSchema(items: { name: string; item?: string }[]) {
@@ -83,6 +85,6 @@ export function createBreadcrumbSchema(items: { name: string; item?: string }[])
       position: index + 1,
       name: crumb.name,
       item: crumb.item ? `${BASE_URL}${crumb.item}` : undefined,
-    }))
+    })),
   };
 }

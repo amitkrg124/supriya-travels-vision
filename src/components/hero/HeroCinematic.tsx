@@ -14,7 +14,10 @@ export function HeroCinematic() {
   const reduced = useReducedMotion();
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-navy-deep md:min-h-screen" style={{ minHeight: "100svh" }}>
+    <section
+      className="relative flex min-h-screen items-center overflow-hidden bg-navy-deep md:min-h-screen"
+      style={{ minHeight: "100svh" }}
+    >
       <motion.video
         className="absolute inset-0 h-full w-full object-cover"
         style={{ objectPosition: "center" }}
@@ -43,7 +46,10 @@ export function HeroCinematic() {
 
       <div className="shell relative z-10 py-32 text-center">
         <div className="mx-auto max-w-[900px]">
-          <motion.p {...rise(0, reduced)} className="eyebrow inline-flex items-center gap-3 text-white">
+          <motion.p
+            {...rise(0, reduced)}
+            className="eyebrow inline-flex items-center gap-3 text-white"
+          >
             <span aria-hidden className="h-px w-8 bg-gold" />
             Supriya Travels of India
           </motion.p>
@@ -85,7 +91,9 @@ export function HeroCinematic() {
           className="w-px bg-white/50"
           initial={{ height: 0 }}
           animate={{ height: reduced ? 32 : [0, 32, 0] }}
-          transition={reduced ? { duration: 0.4 } : { duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+          transition={
+            reduced ? { duration: 0.4 } : { duration: 2.6, repeat: Infinity, ease: "easeInOut" }
+          }
         />
       </div>
     </section>

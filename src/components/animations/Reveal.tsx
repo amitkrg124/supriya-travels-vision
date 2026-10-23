@@ -14,9 +14,12 @@ type RevealProps = {
 
 const entranceVariants: Record<EntranceType, { initial: object; animate: object }> = {
   "fade-up": { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 } },
-  "fade": { initial: { opacity: 0 }, animate: { opacity: 1 } },
-  "clip": { initial: { opacity: 0, clipPath: "inset(0 100% 0 0)" }, animate: { opacity: 1, clipPath: "inset(0 0% 0 0)" } },
-  "scale": { initial: { opacity: 0, scale: 0.96 }, animate: { opacity: 1, scale: 1 } },
+  fade: { initial: { opacity: 0 }, animate: { opacity: 1 } },
+  clip: {
+    initial: { opacity: 0, clipPath: "inset(0 100% 0 0)" },
+    animate: { opacity: 1, clipPath: "inset(0 0% 0 0)" },
+  },
+  scale: { initial: { opacity: 0, scale: 0.96 }, animate: { opacity: 1, scale: 1 } },
 };
 
 export function Reveal({

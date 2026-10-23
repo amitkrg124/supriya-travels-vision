@@ -31,7 +31,11 @@ export function ServiceDetail({
         intro={intro}
         image={image}
         imageAlt={imageAlt}
-        crumbs={[{ label: "Home", to: "/" }, { label: "Services", to: "/our-services" }, { label: crumbLabel }]}
+        crumbs={[
+          { label: "Home", to: "/" },
+          { label: "Services", to: "/our-services" },
+          { label: crumbLabel },
+        ]}
       />
 
       <section className="bg-background py-24 md:py-32">
@@ -39,9 +43,15 @@ export function ServiceDetail({
           <SectionHeading eyebrow="Overview" title={body} />
           <div className="mt-14 grid gap-x-12 gap-y-10 md:grid-cols-3">
             {items.map((item, i) => (
-              <Reveal key={item.title} delay={(i % 3) * 0.05} className="border-t border-border pt-6">
+              <Reveal
+                key={item.title}
+                delay={(i % 3) * 0.05}
+                className="border-t border-border pt-6"
+              >
                 <h2 className="font-display text-2xl text-navy">{item.title}</h2>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{item.text}</p>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+                  {item.text}
+                </p>
               </Reveal>
             ))}
           </div>

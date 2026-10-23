@@ -204,9 +204,7 @@ export function HiddenGemsHorizontal() {
                 {/* Card Content & Details */}
                 <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 flex flex-col justify-end z-10">
                   <span className="eyebrow text-gold">{gem.duration}</span>
-                  <h3 className="font-display text-3xl text-white mt-1">
-                    {gem.title}
-                  </h3>
+                  <h3 className="font-display text-3xl text-white mt-1">{gem.title}</h3>
                   <p className="font-sans text-xs sm:text-sm text-white/75 mt-2 line-clamp-2 leading-relaxed">
                     {gem.tagline}
                   </p>
